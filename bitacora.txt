@@ -1,0 +1,24 @@
+Request URL
+http://127.0.0.1:5500/index.html
+
+Protocol
+http://127.0.0.1:5500/index.html
+
+Remote address
+127.0.0.1:5500
+
+Request method
+GET
+
+Status code
+304 Not Modified
+
+Escribiendo una ruta inexistente como "/promociones.html" arroja Status code
+404 Not Found
+Significa que el recurso no fue encontrado. El servidor web está funcionando y escuchó la petición, pero el archivo específico (promociones.html) no existe en la carpeta o ruta indicada.
+
+Roles de HTML, CSS y JS en el sitio
+HTML: Cumple con el rol de estructurar toda la maqueta del sitio, indicando la forma en la que se organiza la base del código y el contenido en general.
+CSS: Es el encargado de acomodar, dar vida y materializar los estilos, colores, formas y tamaños para que las proporciones cumplan con el estandar de un diseño adecuado para la vista.
+JS: Si la página require funciones específicas, animaciones o herramientas especializadas, la lógica de JavaScript sería necesaria en este caso.
+
