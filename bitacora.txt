@@ -36,3 +36,39 @@ paginas/reservas.html | Tarifas y rutas | tarifas.html#tarifas
 paginas/reservas.html | Reservas | reservas.html
 
 Las rutas relativas indican cómo llegar a otro archivo desde la ubicación del archivo actual. Si el destino está en una subcarpeta, escribo su carpeta; si está un nivel arriba, uso ../; si está junto al archivo actual, basta con su nombre. Y con #id puedo enlazar directamente a una sección.
+
+Esquemas semánticos de las páginas (antes de reestructurar el HTML)
+
+Inicio (index.html)
+header: nombre/logo del negocio + nav principal
+main:
+  h1: Rueda Libre
+  section: ¿Quiénes somos?
+  section: Nuestros servicios
+    article: Alquiler por horas
+    article: Tours guiados en bicicleta
+    article: Alquiler mensual
+  CTA: Reservar ahora
+  section: ¿Cómo alquilar? (pasos y beneficios)
+  section: Encuéntranos
+  section: Galería
+aside: no aplica
+footer: negocio + correo + año
+
+Tarifas (paginas/tarifas.html)
+header: nombre/logo del negocio + nav principal
+main:
+  h1: Tarifas de alquiler
+  section: tabla de tarifas de bicicletas
+  section: tabla de recorridos guiados + enlace para reservar
+  section: información del recorrido
+    aside: lista complementaria de qué llevar
+footer: negocio + correo + año
+
+Reservas (paginas/reservas.html)
+header: nombre/logo del negocio + nav principal
+main:
+  h1: Reserva tu bicicleta
+  sección: información de contacto
+  aside: horario de atención como contenido complementario
+footer: negocio + correo + año
