@@ -22,3 +22,17 @@ HTML: Cumple con el rol de estructurar toda la maqueta del sitio, indicando la f
 CSS: Es el encargado de acomodar, dar vida y materializar los estilos, colores, formas y tamaños para que las proporciones cumplan con el estandar de un diseño adecuado para la vista.
 JS: Si la página require funciones específicas, animaciones o herramientas especializadas, la lógica de JavaScript sería necesaria en este caso.
 
+Rutas internas utilizadas en el sitio
+Archivo de origen | Destino | Ruta escrita
+index.html | Inicio | index.html
+index.html | Tarifas y rutas | paginas/tarifas.html
+index.html | Recorridos guiados en tarifas | paginas/tarifas.html#recorridos-guiados
+index.html | Reservas | paginas/reservas.html
+paginas/tarifas.html | Inicio | ../index.html
+paginas/tarifas.html | Tarifas y rutas | tarifas.html#tarifas
+paginas/tarifas.html | Reservas | reservas.html
+paginas/reservas.html | Inicio | ../index.html
+paginas/reservas.html | Tarifas y rutas | tarifas.html#tarifas
+paginas/reservas.html | Reservas | reservas.html
+
+Las rutas relativas indican cómo llegar a otro archivo desde la ubicación del archivo actual. Si el destino está en una subcarpeta, escribo su carpeta; si está un nivel arriba, uso ../; si está junto al archivo actual, basta con su nombre. Y con #id puedo enlazar directamente a una sección.
