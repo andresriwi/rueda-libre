@@ -23,9 +23,76 @@
 
     <main>
         <h1>Reserva tu bicicleta</h1>
-        <p>Mientras preparamos nuestro formulario de reservas, puedes escribirnos a
+        <p>También puedes escribirnos a
             <a href="mailto:hola@ruedalibre.com">hola@ruedalibre.com</a>.
         </p>
+
+        <section aria-labelledby="titulo-formulario">
+            <h2 id="titulo-formulario">Formulario de reserva</h2>
+            <form action="reservas.html" method="post">
+                <fieldset>
+                    <legend>Tus datos</legend>
+
+                    <label for="nombre-completo">Nombre completo</label>
+                    <input type="text" id="nombre-completo" name="nombre_completo" autocomplete="name" required>
+
+                    <label for="documento">Número de documento</label>
+                    <input type="text" id="documento" name="documento" autocomplete="off" required>
+
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" autocomplete="email" required>
+
+                    <label for="celular">Celular</label>
+                    <input type="tel" id="celular" name="celular" autocomplete="tel" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Tu alquiler</legend>
+
+                    <label for="fecha-alquiler">Fecha del alquiler</label>
+                    <input type="date" id="fecha-alquiler" name="fecha_alquiler" required>
+
+                    <p>Tipo de bicicleta</p>
+                    <input type="radio" id="bicicleta-urbana" name="tipo_bicicleta" value="urbana" required>
+                    <label for="bicicleta-urbana">Urbana</label>
+                    <input type="radio" id="bicicleta-montana" name="tipo_bicicleta" value="montana">
+                    <label for="bicicleta-montana">Montaña</label>
+                    <input type="radio" id="bicicleta-electrica" name="tipo_bicicleta" value="electrica">
+                    <label for="bicicleta-electrica">Eléctrica</label>
+
+                    <label for="plan">Plan</label>
+                    <select id="plan" name="plan" required>
+                        <option value="">Selecciona un plan</option>
+                        <option value="1-hora">1 hora</option>
+                        <option value="medio-dia">Medio día</option>
+                        <option value="dia-completo">Día completo</option>
+                    </select>
+
+                    <label for="cantidad">Cantidad de bicicletas</label>
+                    <input type="number" id="cantidad" name="cantidad" min="1" step="1" required>
+
+                    <label for="recorrido">Recorrido guiado</label>
+                    <select id="recorrido" name="recorrido">
+                        <option value="ninguno">Ninguno</option>
+                        <option value="rio-parques">Río y Parques</option>
+                        <option value="sabores-barrio">Sabores de Barrio</option>
+                        <option value="reto-palmas">Reto Las Palmas</option>
+                    </select>
+
+                    <label for="comentarios">Comentarios</label>
+                    <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Confirmación</legend>
+
+                    <input type="checkbox" id="acepta-politicas" name="acepta_politicas" value="si" required>
+                    <label for="acepta-politicas">Acepto las políticas de alquiler</label>
+                </fieldset>
+
+                <button type="submit">Enviar reserva</button>
+            </form>
+        </section>
 
         <aside aria-labelledby="titulo-horarios">
             <h2 id="titulo-horarios">Horario de atención</h2>

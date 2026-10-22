@@ -70,5 +70,14 @@ header: nombre/logo del negocio + nav principal
 main:
   h1: Reserva tu bicicleta
   sección: información de contacto
+  section: Formulario de reserva
+    fieldset: Tus datos
+    fieldset: Tu alquiler
+    fieldset: Confirmación
   aside: horario de atención como contenido complementario
 footer: negocio + correo + año
+
+Decisiones de controles del formulario de reservas
+- Correo electrónico usa input type="email" para validar el formato de correo en el navegador y facilitar su captura en móviles.
+- Tipo de bicicleta usa botones radio porque se puede elegir solo una de las tres opciones.
+- Fecha del alquiler usa input type="date" para capturar una fecha en un formato normalizado mediante un selector de calendario.
