@@ -81,3 +81,23 @@ Decisiones de controles del formulario de reservas
 - Correo electrónico usa input type="email" para validar el formato de correo en el navegador y facilitar su captura en móviles.
 - Tipo de bicicleta usa botones radio porque se puede elegir solo una de las tres opciones.
 - Fecha del alquiler usa input type="date" para capturar una fecha en un formato normalizado mediante un selector de calendario.
+
+Pruebas de validación nativa del formulario (realizadas en navegador)
+Campo | Dato de prueba | Resultado esperado | Resultado obtenido
+Nombre completo | "ab" | Rechazado: mínimo 3 caracteres | Rechazado (tooShort)
+Documento | "12345" | Rechazado: menos de 6 dígitos | Rechazado (patternMismatch)
+Documento | "12345678901" | Rechazado: más de 10 dígitos | Rechazado (patternMismatch)
+Correo | "ana@" | Rechazado: correo inválido | Rechazado (typeMismatch)
+Celular | "2001234567" | Rechazado: debe empezar por 3 | Rechazado (patternMismatch)
+Celular | "300123456" | Rechazado: debe tener 10 dígitos | Rechazado (patternMismatch)
+Fecha del alquiler | 31/10/2026 | Rechazado: anterior al 01/11/2026 | Rechazado (rangeUnderflow)
+Fecha del alquiler | 01/01/2027 | Rechazado: posterior al 31/12/2026 | Rechazado (rangeOverflow)
+Tipo de bicicleta | Sin opción seleccionada | Rechazado: campo obligatorio | Rechazado (valueMissing)
+Plan | Opción inicial vacía | Rechazado: campo obligatorio | Rechazado (valueMissing)
+Cantidad de bicicletas | 0 | Rechazado: mínimo 1 | Rechazado (rangeUnderflow)
+Cantidad de bicicletas | 7 | Rechazado: máximo 6 | Rechazado (rangeOverflow)
+Comentarios | 301 caracteres escritos | Limitar a 300 caracteres | El control aceptó un máximo de 300
+Políticas de alquiler | Casilla sin marcar | Rechazado: aceptación obligatoria | Rechazado (valueMissing)
+
+Prueba de teclado
+Se completó un envío válido usando teclado desde el primer campo: Tab para avanzar, flecha derecha para elegir bicicleta, flechas en el recorrido, Espacio para aceptar políticas y Enter para enviar. Los controles se recorrieron en el orden del formulario y el evento de envío se disparó con el formulario válido. En la fecha, el navegador usa segmentos internos; Tab pasó sus segmentos antes de avanzar al tipo de bicicleta. También se probó Shift+Tab desde el botón: volvió a la casilla de políticas y Tab regresó al botón.
