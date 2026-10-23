@@ -11,6 +11,12 @@
     --space-large: 2rem;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     background-color: var(--color-crema);
@@ -123,8 +129,18 @@ footer a:hover {
 
 main {
     margin: 0 auto;
-    max-width: 72rem;
+    max-width: 70rem;
     padding: var(--space-large) var(--space-medium);
+    width: 100%;
+}
+
+main.home-page {
+    min-height: 75vh;
+}
+
+p,
+li {
+    max-width: 68ch;
 }
 
 section,
@@ -132,6 +148,29 @@ article,
 aside,
 figure {
     margin-bottom: var(--space-large);
+}
+
+#servicios {
+    display: grid;
+    gap: var(--space-large);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+
+#servicios > h2,
+#servicios > p {
+    grid-column: 1 / -1;
+}
+
+#servicios article {
+    border: 1px solid var(--color-gris-asfalto);
+    border-radius: 0.75rem;
+    margin-bottom: 0;
+    padding: var(--space-medium);
+}
+
+#servicios article img {
+    display: block;
+    width: 100%;
 }
 
 a {
@@ -195,6 +234,10 @@ table {
     width: 100%;
 }
 
+section:has(> table) {
+    overflow-x: auto;
+}
+
 caption {
     font-weight: 600;
     margin-bottom: var(--space-small);
@@ -204,7 +247,7 @@ caption {
 th,
 td {
     border: 1px solid var(--color-gris-asfalto);
-    padding: var(--space-small);
+    padding: 0.75rem;
     text-align: left;
 }
 
@@ -212,25 +255,44 @@ th {
     font-weight: 600;
 }
 
+thead th {
+    background-color: var(--color-azul-noche);
+    color: #FFFFFF;
+}
+
 fieldset {
     border: 1px solid var(--color-verde-ruta);
-    margin: 0 0 var(--space-medium);
-    padding: var(--space-medium);
+    margin: 0 0 var(--space-large);
+    padding: var(--space-large);
 }
 
 legend {
     font-family: var(--font-heading);
 }
 
-label {
+form > fieldset > label {
+    display: block;
+    margin: 0 0 var(--space-small);
+}
+
+form > fieldset > input[type="checkbox"] + label {
     display: inline-block;
-    margin: var(--space-small) var(--space-small) var(--space-small) 0;
+    margin: var(--space-small);
+}
+
+form fieldset fieldset {
+    margin-bottom: var(--space-medium);
+    padding: var(--space-medium);
+}
+
+form fieldset fieldset label {
+    display: inline-block;
+    margin: 0 var(--space-medium) var(--space-small) var(--space-small);
 }
 
 input:not([type="radio"], [type="checkbox"]),
 select,
 textarea {
-    box-sizing: border-box;
     display: block;
     font: inherit;
     margin-bottom: var(--space-medium);
@@ -245,7 +307,7 @@ button {
     color: #FFFFFF;
     cursor: pointer;
     font: 600 1rem var(--font-body);
-    padding: var(--space-small) var(--space-medium);
+    padding: 0.75rem 1.5rem;
 }
 
 button:hover {

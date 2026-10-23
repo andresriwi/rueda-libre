@@ -147,3 +147,6 @@ Selector | Especificidad (ID, clase/atributo/pseudoclase, elemento) | Resultado
 
 Se resolvió la cascada usando selectores descendientes más específicos, sin !important ni estilos en línea. Los enlaces CTA de reserva tienen estados hover y focus-visible. Los botones del formulario cambian a Azul Noche al pasar el mouse y conservan un contorno visible al recibir foco. Los campos mantienen el contorno Verde Ruta con separación; no se eliminó el indicador nativo sin reemplazo.
 Verificación en DevTools: las tres páginas muestran un único enlace activo correcto; los enlaces normales son blancos sobre Azul Noche y el activo es Azul Noche sobre Naranja Pedal. Hover subraya los enlaces y los diferencia con fondo; el foco de logo y menú muestra contorno naranja de 3 px. La navegación por teclado muestra contorno Verde Ruta de 3 px en los campos. CTA y botón cambian a fondo Azul Noche con texto blanco al pasar el mouse.
+
+Prueba del modelo de caja en una tarjeta de servicio.
+Elemento inspeccionado: #servicios article. En DevTools comparé content-box y border-box. La tarjeta tiene 32 px de relleno horizontal (16 px por lado) y 2 px de borde (1 px por lado)
