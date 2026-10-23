@@ -101,3 +101,33 @@ Políticas de alquiler | Casilla sin marcar | Rechazado: aceptación obligatoria
 
 Prueba de teclado
 Se completó un envío válido usando teclado desde el primer campo: Tab para avanzar, flecha derecha para elegir bicicleta, flechas en el recorrido, Espacio para aceptar políticas y Enter para enviar. Los controles se recorrieron en el orden del formulario y el evento de envío se disparó con el formulario válido. En la fecha, el navegador usa segmentos internos; Tab pasó sus segmentos antes de avanzar al tipo de bicicleta. También se probó Shift+Tab desde el botón: volvió a la casilla de políticas y Tab regresó al botón.
+
+Auditoría de accesibilidad (tres páginas)
+Hallazgo Corrección / resultado
+index.html: "Reservar ahora" no explicaba claramente el destino fuera de contexto | Se cambió a "Reservar una bicicleta ahora".
+Tres páginas:
+1. Idioma del documento lang="es" en todas.
+2. Texto alternativo: todas las imágenes tienen alt descriptivo y cargan correctamente; no hay imágenes decorativas que requieran alt vacío.
+3. Enlaces: los enlaces tienen texto o nombre accesible comprensible, incluyendo navegación, recorridos, correo y reserva.
+4. Teclado: TAB recorre en orden lógico y vuelve al primer enlace al completar cada página. En reservas se recorrieron los campos de principio a fin, flecha derecha seleccionó bicicleta, flechas cambiaron recorrido, Espacio marcó políticas y Enter disparó un envío válido.
+
+Contraste de la paleta (WebAIM Contrast Checker, WCAG AA)
+Texto | Fondo | Razón | Clasificación
+Blanco #FFFFFF | Verde Ruta #1E7A4F | 5.31:1 | Apta para texto normal
+Blanco #FFFFFF | Naranja Pedal #F39A2B | 2.21:1 | No apta
+Azul Noche #14213D | Naranja Pedal #F39A2B | 7.20:1 | Apta para texto normal
+Azul Noche #14213D | Crema #FAF6EF | 14.82:1 | Apta para texto normal
+Gris Asfalto #5B6470 | Crema #FAF6EF | 5.56:1 | Apta para texto normal
+Verde Ruta #1E7A4F | Crema #FAF6EF | 4.93:1 | Apta para texto normal
+Naranja Pedal #F39A2B | Crema #FAF6EF | 2.05:1 | No apta
+Blanco #FFFFFF | Azul Noche #14213D | 15.97:1 | Apta para texto normal
+No hay combinaciones que sean aptas solo para texto grande: las demás pasan el mínimo 4.5:1 de texto normal o no llegan a 3:1.
+
+Mapa de uso de color propuesto
+- Fondo general: Crema #FAF6EF.
+- Texto principal y títulos: Azul Noche #14213D; texto secundario: Gris Asfalto #5B6470.
+- Enlaces sobre Crema: Verde Ruta #1E7A4F, manteniendo siempre su subrayado u otra señal además del color.
+- Botón principal: fondo Verde Ruta con texto blanco.
+- Botones secundarios y destacados Naranja Pedal: texto Azul Noche; no usar blanco sobre naranja.
+- Encabezados o bandas Azul Noche: texto blanco.
+- No usar Naranja Pedal como texto sobre Crema; reservarlo para fondos/acento con texto Azul Noche.

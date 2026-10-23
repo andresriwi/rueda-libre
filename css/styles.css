@@ -1,0 +1,246 @@
+:root {
+    --color-verde-ruta: #1E7A4F;
+    --color-naranja-pedal: #F39A2B;
+    --color-azul-noche: #14213D;
+    --color-crema: #FAF6EF;
+    --color-gris-asfalto: #5B6470;
+    --font-heading: "Montserrat", Arial, sans-serif;
+    --font-body: "Open Sans", Arial, sans-serif;
+    --space-small: 0.5rem;
+    --space-medium: 1rem;
+    --space-large: 2rem;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-crema);
+    color: var(--color-azul-noche);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-azul-noche);
+    font-family: var(--font-heading);
+    line-height: 1.2;
+}
+
+header {
+    align-items: center;
+    background-color: var(--color-azul-noche);
+    border-bottom: 0.25rem solid var(--color-verde-ruta);
+    box-shadow: 0 0.25rem 1rem rgb(20 33 61 / 16%);
+    color: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-large);
+    justify-content: space-between;
+    padding: var(--space-medium) clamp(1rem, 5vw, 4rem);
+}
+
+.site-brand {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    line-height: 0;
+}
+
+.site-brand img {
+    filter: brightness(0) invert(1);
+    height: auto;
+    max-width: 8rem;
+    width: 100%;
+}
+
+.site-nav ul {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-small);
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav a {
+    border-radius: 999px;
+    color: #FFFFFF;
+    display: inline-block;
+    font-weight: 600;
+    padding: 0.65rem 1rem;
+    text-decoration: none;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+.site-nav a:hover {
+    background-color: rgb(255 255 255 / 12%);
+    color: #FFFFFF;
+}
+
+.site-nav a[aria-current="page"] {
+    background-color: var(--color-naranja-pedal);
+    color: var(--color-azul-noche);
+}
+
+.site-nav a[aria-current="page"]:hover {
+    background-color: #FFFFFF;
+    color: var(--color-azul-noche);
+}
+
+header a:focus-visible {
+    outline: 3px solid var(--color-naranja-pedal);
+    outline-offset: 4px;
+}
+
+footer a:hover {
+    color: var(--color-naranja-pedal);
+}
+
+main {
+    margin: 0 auto;
+    max-width: 72rem;
+    padding: var(--space-large) var(--space-medium);
+}
+
+section,
+article,
+aside,
+figure {
+    margin-bottom: var(--space-large);
+}
+
+a {
+    color: var(--color-verde-ruta);
+    font-weight: 600;
+}
+
+a:hover {
+    color: var(--color-azul-noche);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-verde-ruta);
+    outline-offset: 3px;
+}
+
+footer a:focus-visible {
+    outline-color: var(--color-verde-ruta);
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+figure img {
+    display: block;
+}
+
+figcaption,
+small {
+    color: var(--color-gris-asfalto);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+caption {
+    font-weight: 600;
+    margin-bottom: var(--space-small);
+    text-align: left;
+}
+
+th,
+td {
+    border: 1px solid var(--color-gris-asfalto);
+    padding: var(--space-small);
+    text-align: left;
+}
+
+th {
+    font-weight: 600;
+}
+
+fieldset {
+    border: 1px solid var(--color-verde-ruta);
+    margin: 0 0 var(--space-medium);
+    padding: var(--space-medium);
+}
+
+legend {
+    font-family: var(--font-heading);
+}
+
+label {
+    display: inline-block;
+    margin: var(--space-small) var(--space-small) var(--space-small) 0;
+}
+
+input:not([type="radio"], [type="checkbox"]),
+select,
+textarea {
+    box-sizing: border-box;
+    display: block;
+    font: inherit;
+    margin-bottom: var(--space-medium);
+    max-width: 100%;
+    padding: var(--space-small);
+    width: 100%;
+}
+
+button {
+    background-color: var(--color-verde-ruta);
+    border: 0;
+    color: #FFFFFF;
+    cursor: pointer;
+    font: 600 1rem var(--font-body);
+    padding: var(--space-small) var(--space-medium);
+}
+
+footer {
+    background-color: var(--color-azul-noche);
+    color: #FFFFFF;
+    padding: var(--space-medium) var(--space-large);
+    text-align: center;
+}
+
+footer a {
+    color: #FFFFFF;
+}
+
+@media (max-width: 40rem) {
+    header {
+        flex-direction: column;
+        gap: var(--space-small);
+        padding: var(--space-medium);
+    }
+
+    .site-brand img {
+        max-width: 6rem;
+    }
+
+    .site-nav ul {
+        justify-content: center;
+    }
+
+    .site-nav a {
+        padding: 0.55rem 0.8rem;
+    }
+
+    main {
+        padding: var(--space-medium);
+    }
+}
