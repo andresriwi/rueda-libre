@@ -131,3 +131,19 @@ Mapa de uso de color propuesto
 - Botones secundarios y destacados Naranja Pedal: texto Azul Noche; no usar blanco sobre naranja.
 - Encabezados o bandas Azul Noche: texto blanco.
 - No usar Naranja Pedal como texto sobre Crema; reservarlo para fondos/acento con texto Azul Noche.
+
+Estados de navegación, enlaces, botones y campos
+Se añadió id="menu" a la lista de navegación y class="activo" al enlace de la página actual. En DevTools, antes de la corrección, ninguna regla coincidía: la lista no tenía id="menu" y el enlace actual no tenía class="activo". Tras añadirlos, #menu a prevalecería sobre .activo por su mayor especificidad si ambos declararan la misma propiedad; se conserva la regla requerida y se resuelve la cascada con selectores descendientes más específicos.
+
+Selector | Especificidad (ID, clase/atributo/pseudoclase, elemento) | Resultado
+#menu a | (1, 0, 1) | Selector del compañero; su color gris perdería contraste sobre el fondo Azul Noche.
+.activo | (0, 1, 0) | Selector del compañero; antes no coincidía con ningún elemento y, tras agregar la clase, tiene menor especificidad que #menu a.
+.site-nav #menu a | (1, 1, 1) | Regla descendiente para la navegación; prevalece sobre #menu a y mantiene texto blanco sobre Azul Noche.
+.site-nav #menu a.activo | (1, 2, 1) | Estado activo: fondo Naranja Pedal con texto Azul Noche, combinación aprobada.
+.site-nav #menu a:hover | (1, 2, 1) | Realza el enlace con fondo translúcido, subrayado y texto blanco.
+.site-nav #menu a:focus-visible | (1, 2, 1) | Muestra contorno Naranja Pedal con separación sobre Azul Noche.
+.cta-link | (0, 1, 0) | Enlace de acción con apariencia de botón: Verde Ruta y texto blanco.
+.cta-link:hover | (0, 2, 0) | Cambia a fondo Azul Noche y conserva texto blanco.
+
+Se resolvió la cascada usando selectores descendientes más específicos, sin !important ni estilos en línea. Los enlaces CTA de reserva tienen estados hover y focus-visible. Los botones del formulario cambian a Azul Noche al pasar el mouse y conservan un contorno visible al recibir foco. Los campos mantienen el contorno Verde Ruta con separación; no se eliminó el indicador nativo sin reemplazo.
+Verificación en DevTools: las tres páginas muestran un único enlace activo correcto; los enlaces normales son blancos sobre Azul Noche y el activo es Azul Noche sobre Naranja Pedal. Hover subraya los enlaces y los diferencia con fondo; el foco de logo y menú muestra contorno naranja de 3 px. La navegación por teclado muestra contorno Verde Ruta de 3 px en los campos. CTA y botón cambian a fondo Azul Noche con texto blanco al pasar el mouse.

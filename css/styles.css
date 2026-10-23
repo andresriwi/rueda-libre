@@ -58,6 +58,11 @@ header {
     width: 100%;
 }
 
+.site-brand:focus-visible {
+    outline: 3px solid var(--color-naranja-pedal);
+    outline-offset: 4px;
+}
+
 .site-nav ul {
     align-items: center;
     display: flex;
@@ -69,7 +74,16 @@ header {
     padding: 0;
 }
 
-.site-nav a {
+#menu a {
+    color: var(--color-gris-asfalto);
+}
+
+.activo {
+    color: var(--color-verde-ruta);
+    font-weight: 600;
+}
+
+.site-nav #menu a {
     border-radius: 999px;
     color: #FFFFFF;
     display: inline-block;
@@ -79,24 +93,28 @@ header {
     transition: background-color 160ms ease, color 160ms ease;
 }
 
-.site-nav a:hover {
+.site-nav #menu a:hover {
     background-color: rgb(255 255 255 / 12%);
     color: #FFFFFF;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
 }
 
-.site-nav a[aria-current="page"] {
+.site-nav #menu a:focus-visible {
+    outline: 3px solid var(--color-naranja-pedal);
+    outline-offset: 4px;
+}
+
+.site-nav #menu a.activo,
+.site-nav #menu a[aria-current="page"] {
     background-color: var(--color-naranja-pedal);
     color: var(--color-azul-noche);
 }
 
-.site-nav a[aria-current="page"]:hover {
+.site-nav #menu a.activo:hover,
+.site-nav #menu a[aria-current="page"]:hover {
     background-color: #FFFFFF;
     color: var(--color-azul-noche);
-}
-
-header a:focus-visible {
-    outline: 3px solid var(--color-naranja-pedal);
-    outline-offset: 4px;
 }
 
 footer a:hover {
@@ -123,6 +141,26 @@ a {
 
 a:hover {
     color: var(--color-azul-noche);
+}
+
+.cta-link {
+    background-color: var(--color-verde-ruta);
+    border-radius: 0.35rem;
+    color: #FFFFFF;
+    display: inline-block;
+    padding: var(--space-small) var(--space-medium);
+    text-decoration: none;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+.cta-link:hover {
+    background-color: var(--color-azul-noche);
+    color: #FFFFFF;
+}
+
+.cta-link:focus-visible {
+    outline: 3px solid var(--color-azul-noche);
+    outline-offset: 3px;
 }
 
 a:focus-visible,
@@ -210,6 +248,14 @@ button {
     padding: var(--space-small) var(--space-medium);
 }
 
+button:hover {
+    background-color: var(--color-azul-noche);
+}
+
+button:focus-visible {
+    outline-color: var(--color-azul-noche);
+}
+
 footer {
     background-color: var(--color-azul-noche);
     color: #FFFFFF;
@@ -236,7 +282,7 @@ footer a {
         justify-content: center;
     }
 
-    .site-nav a {
+    .site-nav #menu a {
         padding: 0.55rem 0.8rem;
     }
 
