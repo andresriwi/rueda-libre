@@ -149,4 +149,28 @@ Se resolvió la cascada usando selectores descendientes más específicos, sin !
 Verificación en DevTools: las tres páginas muestran un único enlace activo correcto; los enlaces normales son blancos sobre Azul Noche y el activo es Azul Noche sobre Naranja Pedal. Hover subraya los enlaces y los diferencia con fondo; el foco de logo y menú muestra contorno naranja de 3 px. La navegación por teclado muestra contorno Verde Ruta de 3 px en los campos. CTA y botón cambian a fondo Azul Noche con texto blanco al pasar el mouse.
 
 Prueba del modelo de caja en una tarjeta de servicio.
-Elemento inspeccionado: #servicios article. En DevTools comparé content-box y border-box. La tarjeta tiene 32 px de relleno horizontal (16 px por lado) y 2 px de borde (1 px por lado)
+Elemento inspeccionado: #servicios article. En DevTools comparé content-box y border-box. La tarjeta tiene 32 px de relleno horizontal (16 px por lado) y 2 px de borde (1 px por lado).
+Antes (content-box): el ancho de contenido calculado fue 307,33 px y el ancho exterior medido fue 341,33 px. Después (border-box): el ancho calculado y el exterior fueron 341,33 px, ya incluyendo relleno y bordes. En esta tarjeta el ancho exterior no cambió porque ocupa el ancho disponible de la columna de la cuadrícula; cambió cómo se contabilizan las partes de la caja.
+
+Cierre de bitácora: resumen de los MiniRetos de la semana
+
+MiniReto | Lo construido | Aprendizaje / conexión
+1. Kilómetro 0: repositorio y página base | Repositorio, estructura de carpetas, index.html y bitácora. | Base del proyecto donde vive el resto del sitio.
+2. La vitrina de Rueda Libre | Contenido de inicio, servicios, listas, imágenes con rutas relativas, textos alternativos y enlaces. | Presentación principal del negocio.
+3. Tarifas claras: tablas y rutas relativas | Página de tarifas con tablas de alquiler y recorridos, y navegación entre carpetas. | Amplía el sitio y enlaza desde la página de inicio.
+4. Rueda Libre v0.1: un sitio navegable | Página inicial de reservas, menú y pie comunes. | Conecta las páginas en un sitio coherente.
+5. Estructura con significado | Regiones semánticas, encabezados y artículos en las tres páginas. | Da estructura accesible al contenido y establece header, nav, main y footer.
+6. El formulario de reservas | Formulario con fieldsets, leyendas, etiquetas y controles adecuados para los datos solicitados. | Convierte la página de reservas en el punto para captar solicitudes.
+7. Reservas sin errores: validación y teclado | Reglas de validación nativa, patrones de documento y celular y prueba de navegación por teclado. | Reduce errores de captura y hace posible completar el formulario con teclado.
+8. Rueda Libre v0.2: en línea, accesible y publicada | Auditoría de accesibilidad, mapa de contraste y revisión de publicación. | La paleta orienta los estilos y la auditoría guía las correcciones. Estado de publicación: pendiente de subir los cambios por falta de autenticación de GitHub.
+9. La identidad de Rueda Libre | Hoja CSS externa, variables de color y espaciado, Google Fonts y aplicación de marca. | Proporciona la base visual reutilizada en todas las páginas.
+10. Navegación con estados y sin conflictos | Estilos de enlaces, navegación activa, hover, foco visible y CTAs; cascada documentada. | Mejora la interacción visual y la accesibilidad con teclado.
+11. Todo en su lugar: modelo de caja | Box sizing, límites de ancho, tarjetas de servicios, tablas y formulario espaciados. | Ordena el contenido y facilita la lectura en distintos tamaños.
+12. Rueda Libre v1.0: lanzamiento | Etiqueta Nuevo, acceso fijo a WhatsApp, consolidación de estilos y revisión final local. | Integra los retos anteriores. Commit local c989bea y etiqueta v1.0 creados; push y publicación en GitHub Pages pendientes de autenticación.
+
+Lo que mejoraría a continuación
+- Completar el contenido provisional de los servicios y validar que precios, disponibilidad, recorridos y horarios coincidan con la operación real.
+- Conectar el formulario a un servicio de reservas real, documentar el tratamiento de datos y confirmar la disponibilidad antes de aceptar el alquiler; actualmente solo tiene validación del navegador y no procesa reservas en un backend.
+- Reemplazar el número de WhatsApp de demostración por el número oficial de atención y probar el enlace en dispositivos móviles.
+- Publicar el commit y la etiqueta v1.0 cuando se restablezca la autenticación de GitHub; luego comprobar que GitHub Pages despliegue correctamente las tres páginas y sus recursos.
+- Hacer una pasada final con lectores de pantalla, teclado, distintos navegadores y anchos de pantalla; volver a medir contraste si cambia la paleta o algún componente.
