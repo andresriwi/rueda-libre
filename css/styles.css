@@ -11,6 +11,7 @@
     --space-large: 2rem;
 }
 
+/* Base y tipografía */
 *,
 *::before,
 *::after {
@@ -37,6 +38,7 @@ h6 {
     line-height: 1.2;
 }
 
+/* Encabezado y navegación */
 header {
     align-items: center;
     background-color: var(--color-azul-noche);
@@ -123,10 +125,7 @@ header {
     color: var(--color-azul-noche);
 }
 
-footer a:hover {
-    color: var(--color-naranja-pedal);
-}
-
+/* Contenido y servicios */
 main {
     margin: 0 auto;
     max-width: 70rem;
@@ -166,13 +165,26 @@ figure {
     border-radius: 0.75rem;
     margin-bottom: 0;
     padding: var(--space-medium);
+    position: relative;
 }
 
-#servicios article img {
-    display: block;
-    width: 100%;
+.new-badge {
+    background-color: var(--color-naranja-pedal);
+    border-radius: 999px;
+    color: var(--color-azul-noche);
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    position: absolute;
+    right: var(--space-medium);
+    top: var(--space-medium);
 }
 
+.electric-service h3 {
+    padding-right: 4.5rem;
+}
+
+/* Enlaces, botones y foco */
 a {
     color: var(--color-verde-ruta);
     font-weight: 600;
@@ -182,24 +194,18 @@ a:hover {
     color: var(--color-azul-noche);
 }
 
-.cta-link {
+.cta-link,
+button {
     background-color: var(--color-verde-ruta);
+    border: 0;
     border-radius: 0.35rem;
     color: #FFFFFF;
+    cursor: pointer;
     display: inline-block;
-    padding: var(--space-small) var(--space-medium);
+    font: 600 1rem var(--font-body);
+    padding: 0.75rem 1.5rem;
     text-decoration: none;
     transition: background-color 160ms ease, color 160ms ease;
-}
-
-.cta-link:hover {
-    background-color: var(--color-azul-noche);
-    color: #FFFFFF;
-}
-
-.cta-link:focus-visible {
-    outline: 3px solid var(--color-azul-noche);
-    outline-offset: 3px;
 }
 
 a:focus-visible,
@@ -211,10 +217,7 @@ textarea:focus-visible {
     outline-offset: 3px;
 }
 
-footer a:focus-visible {
-    outline-color: var(--color-verde-ruta);
-}
-
+/* Imágenes */
 img {
     height: auto;
     max-width: 100%;
@@ -229,6 +232,7 @@ small {
     color: var(--color-gris-asfalto);
 }
 
+/* Tablas */
 table {
     border-collapse: collapse;
     width: 100%;
@@ -260,6 +264,7 @@ thead th {
     color: #FFFFFF;
 }
 
+/* Formulario */
 fieldset {
     border: 1px solid var(--color-verde-ruta);
     margin: 0 0 var(--space-large);
@@ -301,27 +306,16 @@ textarea {
     width: 100%;
 }
 
-button {
-    background-color: var(--color-verde-ruta);
-    border: 0;
-    color: #FFFFFF;
-    cursor: pointer;
-    font: 600 1rem var(--font-body);
-    padding: 0.75rem 1.5rem;
-}
-
-button:hover {
-    background-color: var(--color-azul-noche);
-}
-
+.cta-link:focus-visible,
 button:focus-visible {
     outline-color: var(--color-azul-noche);
 }
 
+/* Pie y acceso rápido */
 footer {
     background-color: var(--color-azul-noche);
     color: #FFFFFF;
-    padding: var(--space-medium) var(--space-large);
+    padding: var(--space-medium) var(--space-large) calc(var(--space-large) + 3.5rem);
     text-align: center;
 }
 
@@ -329,6 +323,38 @@ footer a {
     color: #FFFFFF;
 }
 
+footer a:hover {
+    color: var(--color-naranja-pedal);
+}
+
+.whatsapp-link {
+    background-color: var(--color-verde-ruta);
+    border: 2px solid #FFFFFF;
+    border-radius: 999px;
+    bottom: var(--space-medium);
+    box-shadow: 0 0.25rem 0.75rem rgb(20 33 61 / 24%);
+    color: #FFFFFF;
+    font-weight: 600;
+    padding: 0.65rem 1rem;
+    position: fixed;
+    right: var(--space-medium);
+    text-decoration: none;
+    z-index: 10;
+}
+
+.cta-link:hover,
+button:hover,
+.whatsapp-link:hover {
+    background-color: var(--color-azul-noche);
+    color: #FFFFFF;
+}
+
+.whatsapp-link:focus-visible {
+    outline: 3px solid var(--color-naranja-pedal);
+    outline-offset: 3px;
+}
+
+/* Ajustes para pantallas pequeñas */
 @media (max-width: 40rem) {
     header {
         flex-direction: column;
