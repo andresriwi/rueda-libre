@@ -94,7 +94,6 @@ header {
 .site-nav #menu a {
     border-radius: 999px;
     color: #FFFFFF;
-    display: inline-block;
     font-weight: 600;
     padding: 0.65rem 1rem;
     text-decoration: none;
@@ -313,10 +312,32 @@ button:focus-visible {
 
 /* Pie y acceso rápido */
 footer {
+    align-items: flex-start;
     background-color: var(--color-azul-noche);
     color: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-large);
+    justify-content: space-between;
     padding: var(--space-medium) var(--space-large) calc(var(--space-large) + 3.5rem);
-    text-align: center;
+}
+
+.footer-block {
+    flex: 1 1 0;
+}
+
+.footer-block h2 {
+    color: #FFFFFF;
+    font-size: 1rem;
+}
+
+.footer-block p,
+.footer-block dl {
+    margin: 0;
+}
+
+.footer-block dd {
+    margin-left: 0;
 }
 
 footer a {
@@ -372,6 +393,12 @@ button:hover,
 
     .site-nav #menu a {
         padding: 0.55rem 0.8rem;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: var(--space-medium);
+        padding: var(--space-medium) var(--space-medium) calc(var(--space-large) + 3.5rem);
     }
 
     main {
