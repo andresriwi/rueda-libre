@@ -185,3 +185,11 @@ Ancho del viewport | Columnas | Filas
 500 px | 1 | 7
 
 La posición inferior de los enlaces «Reservar» quedó alineada dentro de cada fila en los tres anchos probados.
+
+Decisiones de layout con Grid y Flexbox
+En la portada de inicio usé Grid con dos columnas de igual proporción para colocar el texto y la imagen en paralelo. Alineé el contenido al centro para que el bloque de texto quedara centrado verticalmente
+En la galería «Nuestras rutas» usé Grid con tres columnas iguales para mantener las tarjetas en una fila en escritorio y dejar una separación uniforme entre ellas
+En la página de reservas usé Grid con columnas en proporción 2 a 1, para que el formulario ocupe el doble de espacio que la información de contacto. En pantallas estrechas se apilan
+Para el documento y el celular usé Grid con dos columnas iguales, así los campos relacionados quedan en la misma fila. En móvil se convierten en una columna
+En el encabezado usé Flexbox para colocar la marca y el menú en extremos opuestos, y alinearlos verticalmente
+En el pie de página usé Flexbox para distribuir en fila los bloques de marca, contacto y horario, con separación uniforme y alineación superior. En pantallas estrechas se apilan

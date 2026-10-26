@@ -24,14 +24,14 @@
   </nav>
 </header>
 <main class="home-page">
-    <h1>Rueda libre</h1>
-    <section id="quienes-somos">
-  <h2>¿Quiénes somos?</h2>
- <p>
-  En Rueda Libre te ofrecemos la mejor experiencia sobre dos ruedas.
-  Si quieres visitarnos directamente, consulta la sección
-  <a href="#encuentranos">Encuéntranos</a> para ver nuestra ubicación exactas.
-</p>
+    <section class="home-hero" id="quienes-somos" aria-labelledby="home-title">
+  <div class="hero-copy">
+    <h1 id="home-title">Rueda libre</h1>
+    <p>En Rueda Libre te ofrecemos la mejor experiencia sobre dos ruedas. Conoce nuestras bicicletas y recorre Medellín a tu ritmo.</p>
+    <p><a class="cta-link" href="paginas/reservas.html">Reserva tu bicicleta</a></p>
+    <p><a href="#encuentranos">Visítanos en Medellín</a></p>
+  </div>
+  <img src="img/portada.jpg" alt="Grupo de ciclistas junto a sus bicicletas frente a un paisaje montañoso">
 </section>
 
 <section id="servicios">
@@ -151,34 +151,43 @@
     <a href="mailto:hola@ruedalibre.com">hola@ruedalibre.com</a>
   </p>
 </section>
-<section id="galeria">
-  <h2>Galería de Rueda Libre</h2>
+<section id="galeria" aria-labelledby="rutas-title">
+  <h2 id="rutas-title">Nuestras rutas</h2>
 
-  <figure>
+  <figure class="route-card">
     <img
       src="img/portada.jpg"
       alt="Grupo de ciclistas junto a sus bicicletas frente a un paisaje montañoso"
       width="800"
     >
-    <figcaption>Portada de Rueda Libre</figcaption>
+    <figcaption>
+      <h3>Río y Parques</h3>
+      <p>Nivel: Fácil</p>
+    </figcaption>
   </figure>
 
-  <figure>
+  <figure class="route-card">
     <img
       src="img/bicicleta-urbana.jpg"
       alt="Persona en bicicleta urbana blanca con casco y mochila"
       width="400"
     >
-    <figcaption>Bicicleta disponible para alquiler</figcaption>
+    <figcaption>
+      <h3>Sabores de Barrio</h3>
+      <p>Nivel: Medio</p>
+    </figcaption>
   </figure>
 
-  <figure>
+  <figure class="route-card">
     <img
       src="img/ruta-ciclovia.jpg"
       alt="Ruta ciclista pavimentada rodeada de árboles y áreas verdes en la avenida las Vegas"
       width="400"
     >
-    <figcaption>Ruta recomendada para recorrer en bicicleta</figcaption>
+    <figcaption>
+      <h3>Reto Las Palmas</h3>
+      <p>Nivel: Difícil</p>
+    </figcaption>
   </figure>
 </section>
 </main>
