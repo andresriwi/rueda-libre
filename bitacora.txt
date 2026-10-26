@@ -174,3 +174,14 @@ Lo que mejoraría a continuación
 - Reemplazar el número de WhatsApp de demostración por el número oficial de atención y probar el enlace en dispositivos móviles.
 - Publicar el commit y la etiqueta v1.0 cuando se restablezca la autenticación de GitHub; luego comprobar que GitHub Pages despliegue correctamente las tres páginas y sus recursos.
 - Hacer una pasada final con lectores de pantalla, teclado, distintos navegadores y anchos de pantalla; volver a medir contraste si cambia la paleta o algún componente.
+
+Verificación de la cuadrícula de flota con el viewport del navegador
+La cuadrícula usa Grid con `auto-fit` y un mínimo de 16rem por tarjeta; el valor `gap` de 2rem separa filas y columnas uniformemente. Cada tarjeta usa Flexbox en columna y `margin-top: auto` en el precio para mantener el enlace «Reservar» alineado al final de la fila.
+Se agregó el séptimo modelo, Tándem, sin modificar el CSS. Con siete tarjetas, el navegador reorganizó automáticamente la cuadrícula:
+
+Ancho del viewport | Columnas | Filas
+1280 px | 3 | 3
+900 px | 3 | 3
+500 px | 1 | 7
+
+La posición inferior de los enlaces «Reservar» quedó alineada dentro de cada fila en los tres anchos probados.

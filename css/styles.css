@@ -167,6 +167,50 @@ figure {
     position: relative;
 }
 
+#flota {
+    display: grid;
+    gap: var(--space-large);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+
+#flota > h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+.fleet-card {
+    border: 1px solid var(--color-gris-asfalto);
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    overflow: hidden;
+    padding: var(--space-medium);
+}
+
+.fleet-card img {
+    aspect-ratio: 4 / 3;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    width: 100%;
+}
+
+.fleet-card h3 {
+    margin-bottom: var(--space-small);
+}
+
+.fleet-card p {
+    margin-top: 0;
+}
+
+.fleet-card .fleet-price {
+    margin-top: auto;
+}
+
+.fleet-card .cta-link {
+    align-self: flex-start;
+}
+
 .new-badge {
     background-color: var(--color-naranja-pedal);
     border-radius: 999px;
