@@ -206,3 +206,13 @@ Tiempo invertido: aproximadamente 3 min 25 s de tiempo transcurrido entre el ini
 Comparación de distribución: la versión propia usa 9 líneas no vacías en #flota y #flota > h2 (dos selectores y cinco declaraciones CSS, además de llaves). La prueba usa 6 clases distintas de grilla: row, g-4, col-12, col-sm-6, col-lg-4 y col-xl-3. Son 30 usos en total: row y g-4 una vez cada una, más cuatro clases de columna en cada uno de los siete modelos
 Bootstrap resolvió sin CSS propio el cambio de una a dos, tres y cuatro columnas en sus breakpoints sm, lg y xl, el gutter uniforme entre columnas y el ajuste de las imágenes al ancho disponible con img-fluid
 Control que se pierde o se delega al framework: los breakpoints y el número de columnas quedan sujetos a los cortes predefinidos de Bootstrap (576, 992 y 1200 px), en vez del auto-fit con ancho mínimo de 16rem de la versión propia. El gutter también se limita a la escala de Bootstrap. La grilla no define por sí sola el aspecto de las tarjetas ni el recorte de las imágenes; esos detalles requieren estilos adicionales o utilidades configuradas
+
+Sección de beneficios y llamada a la acción con utilidades Bootstrap
+Consulté la documentación oficial de utilidades flex y display
+Clases aplicadas:
+- d-flex: convierte el contenedor en flex y organiza sus elementos en una fila por defecto
+- flex-column: apila los elementos flex en columna en pantallas pequeñas
+- flex-md-row: desde el breakpoint md vuelve a disponer los elementos en fila
+- d-none: oculta el elemento en todos los tamaños mientras no se combine con otra utilidad de display
+- d-md-block: muestra el elemento como bloque desde md; junto con d-none hace que la imagen decorativa aparezca solo desde ese breakpoint
+La franja usa esas utilidades para apilar texto, imagen y enlace en móvil y alinearlos en fila desde md. Los cuatro beneficios se distribuyen en la grilla de Bootstrap y emplean tipografía, espaciado y colores utilitarios; no se añadió CSS propio
