@@ -193,3 +193,10 @@ En la página de reservas usé Grid con columnas en proporción 2 a 1, para que 
 Para el documento y el celular usé Grid con dos columnas iguales, así los campos relacionados quedan en la misma fila. En móvil se convierten en una columna
 En el encabezado usé Flexbox para colocar la marca y el menú en extremos opuestos, y alinearlos verticalmente
 En el pie de página usé Flexbox para distribuir en fila los bloques de marca, contacto y horario, con separación uniforme y alineación superior. En pantallas estrechas se apilan
+
+Prueba adaptable con el modo dispositivo de DevTools
+Probé inicio, tarifas y reservas a 360 px, 768 px y 1280 px. En la primera revisión encontré tres problemas y los corregí:
+En 360 px, los enlaces del menú ocupaban dos filas y el tercer enlace quedaba separado de los otros. Reduje el relleno horizontal de los enlaces en la versión móvil y mantuve el relleno más amplio desde tablet. Ahora los tres enlaces caben en una fila a 360 px
+En la tabla de recorridos, las cinco columnas tenían el mismo ancho y textos como «Distancia» y «Duración» desbordaban sus celdas en móvil. Asigné anchos proporcionales según el contenido y permití el ajuste normal de palabras. A 360 px las dos tablas caben en su contenedor y ninguna celda desborda
+En 768 px, el ancho mínimo de 16rem impuesto a la información de contacto reducía la proporción del formulario a 433:256, en vez de 2:1. Eliminé ese mínimo en la cuadrícula de reservas. Después del ajuste, las columnas miden aproximadamente 459:230 px a 768 px y 768:384 px a 1280 px
+Comprobación final: a 360 px, las reservas se apilan; a 768 px y 1280 px, formulario y contacto mantienen la proporción 2:1. Las tablas no tienen desbordamiento horizontal en ninguno de los tres anchos, las imágenes caben en sus contenedores y las páginas no presentan desbordamiento del documento
