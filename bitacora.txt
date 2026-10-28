@@ -216,3 +216,17 @@ Clases aplicadas:
 - d-none: oculta el elemento en todos los tamaños mientras no se combine con otra utilidad de display
 - d-md-block: muestra el elemento como bloque desde md; junto con d-none hace que la imagen decorativa aparezca solo desde ese breakpoint
 La franja usa esas utilidades para apilar texto, imagen y enlace en móvil y alinearlos en fila desde md. Los cuatro beneficios se distribuyen en la grilla de Bootstrap y emplean tipografía, espaciado y colores utilitarios; no se añadió CSS propio
+
+Migración de inicio a Bootstrap 5.3
+Agregué el CSS y el bundle de Bootstrap por CDN en index.html, dejando styles.css después para conservar la identidad visual. Portada, servicios, flota, galería, beneficios y llamada a la acción usan contenedores, filas, columnas y utilidades. Eliminé las reglas de distribución propias que ya no necesita inicio y marqué en styles.css las reglas que siguen usando tarifas y reservas.
+
+Conflictos observados al inspeccionar estilos computados en el navegador y solución:
+1. Los selectores de ID #servicios, #flota y #galeria tenían más especificidad que la clase .row de Bootstrap; sus declaraciones de display y grid podían imponerse sobre la cuadrícula. Eliminé esas reglas de inicio y reemplacé la distribución por .row, .g-4 y columnas responsivas.
+2. La regla global header aplicaba el fondo azul, borde, padding y display flex tanto a la navegación principal como al header semántico de beneficios. La limité a body > header. En el navegador el header interno quedó transparente, sin padding extra, y conservó el margen mb-4 de Bootstrap.
+3. Las reglas propias de enlaces y encabezados, junto con .cta-link, podían competir con los colores y tamaños de Bootstrap. Quité .cta-link del inicio, conservé esa regla para tarifas, añadí utilidades de color de marca y usé text-white explícitamente en el título de la franja. El estilo computado confirma el título en blanco con Montserrat, los enlaces normales en verde de marca y las llamadas a la acción en verde con texto blanco.
+
+Prueba responsive de inicio en navegador:
+- 360 px: portada apilada; flota y beneficios en una columna; galería en una columna; franja final en columna y su imagen decorativa oculta. Sin desbordamiento horizontal.
+- 768 px: portada en dos columnas; flota y beneficios en dos columnas; galería en tres columnas; franja final en fila y su imagen visible. Sin desbordamiento horizontal.
+- 1280 px: portada en dos columnas; flota en cuatro, beneficios en cuatro y galería en tres columnas; franja final en fila con imagen visible. Sin desbordamiento horizontal.
+Verificación adicional: las imágenes locales cargaron correctamente y el CSS de Bootstrap estuvo presente en la página.
