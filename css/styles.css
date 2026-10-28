@@ -6,9 +6,6 @@
     --color-gris-asfalto: #5B6470;
     --font-heading: "Montserrat", Arial, sans-serif;
     --font-body: "Open Sans", Arial, sans-serif;
-    --space-small: 0.5rem;
-    --space-medium: 1rem;
-    --space-large: 2rem;
 }
 
 .bg-brand-green {
@@ -28,14 +25,7 @@
 }
 
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
 body {
-    margin: 0;
     background-color: var(--color-crema);
     color: var(--color-azul-noche);
     font-family: var(--font-body);
@@ -56,23 +46,10 @@ h6 {
 
 
 body > header {
-    align-items: center;
     background-color: var(--color-azul-noche);
     border-bottom: 0.25rem solid var(--color-verde-ruta);
     box-shadow: 0 0.25rem 1rem rgb(20 33 61 / 16%);
     color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-small);
-    justify-content: center;
-    padding: var(--space-medium);
-}
-
-.site-brand {
-    align-items: center;
-    display: inline-flex;
-    flex: 0 0 auto;
-    line-height: 0;
 }
 
 .site-brand img {
@@ -87,31 +64,10 @@ body > header {
     outline-offset: 4px;
 }
 
-.site-nav ul {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-small);
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#menu a {
-    color: var(--color-gris-asfalto);
-}
-
-.activo {
-    color: var(--color-verde-ruta);
-    font-weight: 600;
-}
-
 .site-nav #menu a {
     border-radius: 999px;
     color: #FFFFFF;
     font-weight: 600;
-    padding: 0.55rem 0.5rem;
     text-decoration: none;
     transition: background-color 160ms ease, color 160ms ease;
 }
@@ -140,25 +96,9 @@ body > header {
     color: var(--color-azul-noche);
 }
 
-/* Contenido y servicios */
-main {
-    margin: 0 auto;
-    max-width: 70rem;
-    padding: var(--space-medium);
-    width: 100%;
-}
-
 p,
 li {
     max-width: 68ch;
-}
-
-/* Keep section spacing on tarifas and reservas until those pages migrate to Bootstrap. */
-body:not(.home-page) section,
-body:not(.home-page) article,
-body:not(.home-page) aside,
-body:not(.home-page) figure {
-    margin-bottom: var(--space-large);
 }
 
 a {
@@ -170,19 +110,9 @@ a:hover {
     color: var(--color-azul-noche);
 }
 
-/* CTA links remain in tarifas until that page migrates to Bootstrap. */
-.cta-link,
 button {
-    background-color: var(--color-verde-ruta);
-    border: 0;
-    border-radius: 0.35rem;
-    color: #FFFFFF;
     cursor: pointer;
-    display: inline-block;
-    font: 600 1rem var(--font-body);
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    transition: background-color 160ms ease, color 160ms ease;
+    font-weight: 600;
 }
 
 a:focus-visible,
@@ -194,15 +124,20 @@ textarea:focus-visible {
     outline-offset: 3px;
 }
 
-/* Imágenes */
-img {
-    display: block;
-    height: auto;
-    max-width: 100%;
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--color-verde-ruta);
+    box-shadow: 0 0 0 0.25rem rgb(30 122 79 / 25%);
 }
 
-figure img {
-    display: block;
+.form-check-input:checked {
+    background-color: var(--color-verde-ruta);
+    border-color: var(--color-verde-ruta);
+}
+
+.bg-brand-green:hover {
+    background-color: var(--color-azul-noche) !important;
+    color: #FFFFFF !important;
 }
 
 figcaption,
@@ -219,7 +154,7 @@ table {
 
 caption {
     font-weight: 600;
-    margin-bottom: var(--space-small);
+    margin-bottom: 0.5rem;
     text-align: left;
     overflow-wrap: anywhere;
 }
@@ -262,123 +197,22 @@ thead th {
     color: #FFFFFF;
 }
 
-/* Layout and form styles still used by reservas.html. */
-.reservation-page {
-    display: grid;
-    gap: var(--space-medium);
-    grid-template-columns: minmax(0, 1fr);
-}
-
-.reservation-page > h1 {
-    grid-column: auto;
-    margin-bottom: 0;
-}
-
-.reservation-form,
-.reservation-info {
-    margin-bottom: 0;
-    min-width: 0;
-}
-
-.reservation-info {
-    align-self: start;
-    background-color: #FFFFFF;
-    border: 1px solid var(--color-gris-asfalto);
-    border-radius: 0.75rem;
-    padding: var(--space-medium);
-}
-
-.reservation-info h3 {
-    font-size: 1.1rem;
-}
-
-.form-row {
-    display: grid;
-    gap: var(--space-medium);
-    grid-template-columns: minmax(0, 1fr);
-}
-
-.form-field {
-    min-width: 0;
-}
-
-.form-field label {
-    display: block;
-    margin-bottom: var(--space-small);
-}
-
 fieldset {
     border: 1px solid var(--color-verde-ruta);
-    margin: 0 0 var(--space-large);
-    padding: var(--space-large);
 }
 
 legend {
     font-family: var(--font-heading);
 }
 
-form > fieldset > label {
-    display: block;
-    margin: 0 0 var(--space-small);
-}
-
-form > fieldset > input[type="checkbox"] + label {
-    display: inline-block;
-    margin: var(--space-small);
-}
-
-form fieldset fieldset {
-    margin-bottom: var(--space-medium);
-    padding: var(--space-medium);
-}
-
-form fieldset fieldset label {
-    display: inline-block;
-    margin: 0 var(--space-medium) var(--space-small) var(--space-small);
-}
-
-input:not([type="radio"], [type="checkbox"]),
-select,
-textarea {
-    display: block;
-    font: inherit;
-    margin-bottom: var(--space-medium);
-    max-width: 100%;
-    padding: var(--space-small);
-    width: 100%;
-}
-
-.cta-link:focus-visible,
-button:focus-visible {
-    outline-color: var(--color-azul-noche);
-}
-
 footer {
-    align-items: flex-start;
     background-color: var(--color-azul-noche);
     color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-medium);
-    padding: var(--space-medium) var(--space-medium) calc(var(--space-large) + 3.5rem);
-}
-
-.footer-block {
-    flex: 0 1 auto;
 }
 
 .footer-block h2 {
     color: #FFFFFF;
     font-size: 1rem;
-}
-
-.footer-block p,
-.footer-block dl {
-    margin: 0;
-}
-
-.footer-block dd {
-    margin-left: 0;
 }
 
 footer a {
@@ -393,19 +227,12 @@ footer a:hover {
     background-color: var(--color-verde-ruta);
     border: 2px solid #FFFFFF;
     border-radius: 999px;
-    bottom: var(--space-medium);
     box-shadow: 0 0.25rem 0.75rem rgb(20 33 61 / 24%);
     color: #FFFFFF;
     font-weight: 600;
-    padding: 0.65rem 1rem;
-    position: fixed;
-    right: var(--space-medium);
     text-decoration: none;
-    z-index: 10;
 }
 
-.cta-link:hover,
-button:hover,
 .whatsapp-link:hover {
     background-color: var(--color-azul-noche);
     color: #FFFFFF;
@@ -417,68 +244,12 @@ button:hover,
 }
 
 @media (min-width: 768px) {
-    body > header {
-        flex-direction: row;
-        gap: var(--space-large);
-        justify-content: space-between;
-        padding: var(--space-medium) clamp(1rem, 5vw, 4rem);
-    }
-
     .site-brand img {
         max-width: 8rem;
-    }
-
-    .site-nav ul {
-        justify-content: flex-end;
-    }
-
-    main {
-        padding: var(--space-large) var(--space-medium);
-    }
-
-    .reservation-page {
-        gap: var(--space-large);
-        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-    }
-
-    .reservation-page > h1 {
-        grid-column: 1 / -1;
-    }
-
-    .reservation-info {
-        padding: var(--space-large);
-    }
-
-    .form-row {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .site-nav #menu a {
-        padding: 0.65rem 1rem;
-    }
-
-    footer {
-        flex-direction: row;
-        gap: var(--space-large);
-        justify-content: space-between;
-        padding: var(--space-medium) var(--space-large) calc(var(--space-large) + 3.5rem);
-    }
-
-    .footer-block {
-        flex: 1 1 0;
     }
 }
 
 @media (min-width: 1200px) {
-    main {
-        max-width: 76rem;
-    }
-
-    body > header {
-        padding-right: max(4rem, calc((100vw - 76rem) / 2));
-        padding-left: max(4rem, calc((100vw - 76rem) / 2));
-    }
-
     th,
     td {
         font-size: 1rem;

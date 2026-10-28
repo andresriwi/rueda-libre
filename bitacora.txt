@@ -230,3 +230,18 @@ Prueba responsive de inicio en navegador:
 - 768 px: portada en dos columnas; flota y beneficios en dos columnas; galería en tres columnas; franja final en fila y su imagen visible. Sin desbordamiento horizontal.
 - 1280 px: portada en dos columnas; flota en cuatro, beneficios en cuatro y galería en tres columnas; franja final en fila con imagen visible. Sin desbordamiento horizontal.
 Verificación adicional: las imágenes locales cargaron correctamente y el CSS de Bootstrap estuvo presente en la página.
+
+Migración final de tarifas y reservas a Bootstrap; medición de código
+Tarifas organiza las dos tablas en una columna principal y muestra la información complementaria en una segunda columna desde lg. Reservas ubica formulario y contacto en proporción 8/4 desde md y organiza los campos con filas y columnas anidadas. Se conservaron los atributos de validación nativa del formulario
+
+Medición reproducible de estilos y grilla:
+- En la v1.5, `styles.css` tenía 624 líneas, según el commit del 27 de octubre de 2026 anterior a la migración a Bootstrap. La versión actual tiene 259 líneas: son 365 líneas menos (58,5 % de reducción)
+- Tiempo invertido en la v1.5: no registrado con cronómetro. Tiempo invertido en la v2.0-beta completa: no registrado con cronómetro. No hay datos comparables para concluir si Bootstrap redujo el tiempo de trabajo, pero basbándose en rapidez del trabajo, sí se nota una reducción en los tiempos de trabajo.
+- Las reglas personalizadas ya no declaran display grid/flex, columnas, dirección, separación, posición fija ni ancho de contenedor. Esas tareas quedan a cargo de las clases Bootstrap
+- Tarifas usa 16 apariciones de clases de grilla (7 clases distintas); reservas usa 31 apariciones (8 clases distintas). Las tablas conservan sus estilos propios
+- La prueba inicial de flota registrada arriba comparó 9 líneas CSS de distribución propias con 6 clases Bootstrap usadas en 30 posiciones para siete modelos
+- Ventajas observadas: Bootstrap aporta una grilla responsive consistente y utilidades listas, reduce el CSS propio de distribución y facilita mantener breakpoints coherentes
+- Desventajas observadas: aumenta la cantidad de clases en el HTML, requiere conocer las convenciones de Bootstrap y ofrece menos control directo que escribir reglas CSS específicas
+Conclusión: entre la v1.5 y la v2.0-beta, el CSS propio pasó de 624 a 259 líneas, una reducción de 58,5 %, principalmente al delegar la distribución responsive a Bootstrap. El cambio reduce el CSS de layout, aunque traslada parte de esa configuración a clases del marcado. Como no se registró el tiempo de ninguna versión con cronómetro, no se puede afirmar que la migración haya sido más rápida. La medición retrospectiva aproximada de 3 min 25 s de la prueba de catálogo no es comparable con el trabajo completo
+
+Validación final: inicio, tarifas y reservas probadas en 360, 768 y 1280 px. No hubo desbordamiento horizontal; en tarifas la información pasa a columna lateral en lg y en reservas el formulario/contacto se muestran 8/4 desde md. Se verificaron los patrones de documento y celular, rango de fecha, límite de cantidad, obligación de campos y atributos maxlength
