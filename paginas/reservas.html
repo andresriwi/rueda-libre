@@ -12,16 +12,23 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header class="d-flex flex-column flex-md-row align-items-center justify-content-md-between gap-2 gap-md-4 px-3 py-3">
-        <a class="site-brand d-inline-flex align-items-center flex-shrink-0" href="../index.html">
-            <img class="d-block" src="../img/logo.png" alt="Rueda Libre, alquiler de bicicletas en Medellín">
-        </a>
-        <nav class="site-nav" aria-label="Navegación principal">
-            <ul id="menu" class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-end gap-2 list-unstyled m-0 p-0">
-                <li><a class="d-inline-block px-2 py-2 px-md-3" href="../index.html">Inicio</a></li>
-                <li><a class="d-inline-block px-2 py-2 px-md-3" href="tarifas.html#tarifas">Tarifas y rutas</a></li>
-                <li><a class="activo d-inline-block px-2 py-2 px-md-3" href="reservas.html" aria-current="page">Reservas</a></li>
-            </ul>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg navbar-dark px-3 py-3" aria-label="Navegación principal">
+            <div class="container-fluid">
+                <a class="site-brand navbar-brand d-inline-flex align-items-center flex-shrink-0" href="../index.html">
+                    <img class="d-block" src="../img/logo.png" alt="Rueda Libre, alquiler de bicicletas en Medellín">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Abrir o cerrar menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="site-nav collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto gap-lg-2">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tarifas.html#tarifas">Tarifas y rutas</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="reservas.html" aria-current="page">Reservas</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -32,27 +39,35 @@
         <section class="col-12 col-md-8 mb-0" aria-labelledby="titulo-formulario">
           <div class="rounded-3 border bg-light p-3 p-md-4">
             <h2 id="titulo-formulario">Formulario de reserva</h2>
-            <form action="reservas.html" method="post">
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+              Recuerda traer tu documento de identidad original al recoger la bicicleta.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar aviso"></button>
+            </div>
+            <form class="needs-validation" action="reservas.html" method="post" novalidate>
                 <fieldset class="mb-4 rounded-3 p-3 p-md-4">
                     <legend>Tus datos</legend>
                     <div class="row g-3">
                       <div class="col-12 col-md-6">
                         <label class="form-label" for="nombre-completo">Nombre completo</label>
-                        <input class="form-control" type="text" id="nombre-completo" name="nombre_completo" autocomplete="name" minlength="3" required>
+                        <input class="form-control" type="text" id="nombre-completo" name="nombre_completo" autocomplete="name" minlength="3" aria-describedby="error-nombre-completo" required>
+                        <div class="invalid-feedback" id="error-nombre-completo">Escribe tu nombre completo con al menos 3 caracteres.</div>
                       </div>
                       <div class="col-12 col-md-6">
                         <label class="form-label" for="correo">Correo electrónico</label>
-                        <input class="form-control" type="email" id="correo" name="correo" autocomplete="email" required>
+                        <input class="form-control" type="email" id="correo" name="correo" autocomplete="email" aria-describedby="error-correo" required>
+                        <div class="invalid-feedback" id="error-correo">Escribe un correo electrónico válido, por ejemplo nombre@dominio.com.</div>
                       </div>
                       <div class="col-12 col-md-6">
                         <label class="form-label" for="documento">Número de documento</label>
-                        <input class="form-control" type="text" id="documento" name="documento" autocomplete="off" pattern="[0-9]{6,10}" title="Ingresa solo números: entre 6 y 10 dígitos." aria-describedby="ayuda-documento" required>
-                        <small id="ayuda-documento">Solo números, entre 6 y 10 dígitos.</small>
+                        <input class="form-control" type="text" id="documento" name="documento" autocomplete="off" pattern="[0-9]{6,10}" title="Ingresa solo números: entre 6 y 10 dígitos." aria-describedby="ayuda-documento error-documento" required>
+                        <div class="form-text" id="ayuda-documento">Solo números, entre 6 y 10 dígitos.</div>
+                        <div class="invalid-feedback" id="error-documento">Ingresa tu documento usando únicamente entre 6 y 10 números.</div>
                       </div>
                       <div class="col-12 col-md-6">
                         <label class="form-label" for="celular">Celular</label>
-                        <input class="form-control" type="tel" id="celular" name="celular" autocomplete="tel" pattern="3[0-9]{9}" title="Ingresa 10 dígitos y comienza por 3." aria-describedby="ayuda-celular" required>
-                        <small id="ayuda-celular">10 dígitos, debe empezar por 3.</small>
+                        <input class="form-control" type="tel" id="celular" name="celular" autocomplete="tel" pattern="3[0-9]{9}" title="Ingresa 10 dígitos y comienza por 3." aria-describedby="ayuda-celular error-celular" required>
+                        <div class="form-text" id="ayuda-celular">10 dígitos, debe empezar por 3.</div>
+                        <div class="invalid-feedback" id="error-celular">Ingresa un celular de 10 dígitos que comience por 3.</div>
                       </div>
                     </div>
                 </fieldset>
@@ -62,15 +77,17 @@
                     <div class="row g-3">
                       <div class="col-12">
                         <label class="form-label" for="fecha-alquiler">Fecha del alquiler</label>
-                        <input class="form-control" type="date" id="fecha-alquiler" name="fecha_alquiler" min="2026-11-01" max="2026-12-31" required>
+                        <input class="form-control" type="date" id="fecha-alquiler" name="fecha_alquiler" min="2026-11-01" max="2026-12-31" aria-describedby="error-fecha-alquiler" required>
+                        <div class="invalid-feedback" id="error-fecha-alquiler">Selecciona una fecha entre el 1 de noviembre y el 31 de diciembre de 2026.</div>
                       </div>
                       <div class="col-12">
-                       <fieldset class="rounded-3 p-3">
+                       <fieldset class="rounded-3 p-3" aria-describedby="error-tipo-bicicleta">
                         <legend>Tipo de bicicleta</legend>
                         <div class="d-flex flex-wrap gap-3">
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" id="bicicleta-urbana" name="tipo_bicicleta" value="urbana" required>
+                            <input class="form-check-input" type="radio" id="bicicleta-urbana" name="tipo_bicicleta" value="urbana" aria-describedby="error-tipo-bicicleta" required>
                             <label class="form-check-label" for="bicicleta-urbana">Urbana</label>
+                            <div class="invalid-feedback" id="error-tipo-bicicleta">Selecciona el tipo de bicicleta que quieres alquilar.</div>
                           </div>
                           <div class="form-check">
                             <input class="form-check-input" type="radio" id="bicicleta-montana" name="tipo_bicicleta" value="montana">
@@ -85,16 +102,18 @@
                       </div>
                       <div class="col-12 col-md-6 col-lg-4">
                         <label class="form-label" for="plan">Plan</label>
-                        <select class="form-select" id="plan" name="plan" required>
+                        <select class="form-select" id="plan" name="plan" aria-describedby="error-plan" required>
                           <option value="">Selecciona un plan</option>
                           <option value="1-hora">1 hora</option>
                           <option value="medio-dia">Medio día</option>
                           <option value="dia-completo">Día completo</option>
                         </select>
+                        <div class="invalid-feedback" id="error-plan">Selecciona uno de los planes disponibles.</div>
                       </div>
                       <div class="col-12 col-md-6 col-lg-4">
                         <label class="form-label" for="cantidad">Cantidad de bicicletas</label>
-                        <input class="form-control" type="number" id="cantidad" name="cantidad" min="1" max="6" step="1" required>
+                        <input class="form-control" type="number" id="cantidad" name="cantidad" min="1" max="6" step="1" aria-describedby="error-cantidad" required>
+                        <div class="invalid-feedback" id="error-cantidad">Indica una cantidad entera entre 1 y 6 bicicletas.</div>
                       </div>
                       <div class="col-12 col-md-6 col-lg-4">
                         <label class="form-label" for="recorrido">Recorrido guiado</label>
@@ -115,12 +134,14 @@
                 <fieldset class="mb-4 rounded-3 p-3 p-md-4">
                     <legend>Confirmación</legend>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="acepta-politicas" name="acepta_politicas" value="si" required>
+                      <input class="form-check-input" type="checkbox" id="acepta-politicas" name="acepta_politicas" value="si" aria-describedby="error-acepta-politicas" required>
                       <label class="form-check-label" for="acepta-politicas">Acepto las políticas de alquiler</label>
+                      <div class="invalid-feedback" id="error-acepta-politicas">Lee las políticas y marca la casilla para confirmar tu aceptación.</div>
+                      <button class="btn btn-outline-success btn-sm mt-2" type="button" data-bs-toggle="modal" data-bs-target="#politicasModal">Ver políticas de alquiler</button>
                     </div>
                 </fieldset>
 
-                <button class="border-0 rounded-3 bg-brand-green px-4 py-2 fw-semibold text-white" type="submit">Enviar reserva</button>
+                <button class="btn btn-success" type="submit">Enviar reserva</button>
             </form>
           </div>
         </section>
@@ -140,6 +161,29 @@
         </aside>
       </div>
     </main>
+
+    <div class="modal fade" id="politicasModal" tabindex="-1" aria-labelledby="politicasModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="politicasModalLabel">Políticas de alquiler</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar políticas"></button>
+                </div>
+                <div class="modal-body">
+                    <ol class="mb-0">
+                        <li>Presenta tu documento de identidad original al recoger la bicicleta.</li>
+                        <li>Revisa la bicicleta con el asesor antes de salir.</li>
+                        <li>Cada 15 minutos de retraso en la devolución tienen un recargo de $5.000.</li>
+                        <li>Los daños por mal uso se cobran según el costo de la reparación.</li>
+                        <li>Los menores de edad deben estar acompañados por un adulto responsable.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="d-flex flex-column flex-md-row justify-content-md-between gap-4 px-3 py-4 pb-5">
         <div class="footer-block flex-fill">
@@ -162,5 +206,26 @@
     </footer>
     <a class="whatsapp-link position-fixed bottom-0 end-0 m-3 px-3 py-2" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp (se abre en otra pestaña)">WhatsApp</a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+    </script>
 </body>
 </html>

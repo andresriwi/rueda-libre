@@ -45,11 +45,15 @@ h6 {
 }
 
 
-body > header {
+.site-header {
     background-color: var(--color-azul-noche);
     border-bottom: 0.25rem solid var(--color-verde-ruta);
     box-shadow: 0 0.25rem 1rem rgb(20 33 61 / 16%);
     color: #FFFFFF;
+}
+
+.site-header .navbar {
+    background-color: transparent;
 }
 
 .site-brand img {
@@ -64,7 +68,7 @@ body > header {
     outline-offset: 4px;
 }
 
-.site-nav #menu a {
+.site-nav .nav-link {
     border-radius: 999px;
     color: #FFFFFF;
     font-weight: 600;
@@ -72,26 +76,26 @@ body > header {
     transition: background-color 160ms ease, color 160ms ease;
 }
 
-.site-nav #menu a:hover {
+.site-nav .nav-link:hover {
     background-color: rgb(255 255 255 / 12%);
     color: #FFFFFF;
     text-decoration: underline;
     text-underline-offset: 0.2em;
 }
 
-.site-nav #menu a:focus-visible {
+.site-nav .nav-link:focus-visible {
     outline: 3px solid var(--color-naranja-pedal);
     outline-offset: 4px;
 }
 
-.site-nav #menu a.activo,
-.site-nav #menu a[aria-current="page"] {
+.site-nav .nav-link.active,
+.site-nav .nav-link[aria-current="page"] {
     background-color: var(--color-naranja-pedal);
     color: var(--color-azul-noche);
 }
 
-.site-nav #menu a.activo:hover,
-.site-nav #menu a[aria-current="page"]:hover {
+.site-nav .nav-link.active:hover,
+.site-nav .nav-link[aria-current="page"]:hover {
     background-color: #FFFFFF;
     color: var(--color-azul-noche);
 }
@@ -113,6 +117,24 @@ a:hover {
 button {
     cursor: pointer;
     font-weight: 600;
+}
+
+.btn-success {
+    --bs-btn-bg: var(--color-verde-ruta);
+    --bs-btn-border-color: var(--color-verde-ruta);
+    --bs-btn-hover-bg: var(--color-azul-noche);
+    --bs-btn-hover-border-color: var(--color-azul-noche);
+    --bs-btn-active-bg: var(--color-azul-noche);
+    --bs-btn-active-border-color: var(--color-azul-noche);
+}
+
+.btn-outline-success {
+    --bs-btn-color: var(--color-verde-ruta);
+    --bs-btn-border-color: var(--color-verde-ruta);
+    --bs-btn-hover-bg: var(--color-verde-ruta);
+    --bs-btn-hover-border-color: var(--color-verde-ruta);
+    --bs-btn-active-bg: var(--color-verde-ruta);
+    --bs-btn-active-border-color: var(--color-verde-ruta);
 }
 
 a:focus-visible,
@@ -140,7 +162,6 @@ textarea:focus-visible {
     color: #FFFFFF !important;
 }
 
-figcaption,
 small {
     color: var(--color-gris-asfalto);
 }
