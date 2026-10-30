@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
@@ -23,9 +24,9 @@
                 </button>
                 <div class="site-nav collapse navbar-collapse" id="mainNavbar">
                     <ul class="navbar-nav ms-auto gap-lg-2">
-                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="tarifas.html#tarifas" aria-current="page">Tarifas y rutas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="reservas.html">Reservas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../index.html"><i class="bi bi-house-door me-1" aria-hidden="true"></i>Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="tarifas.html#tarifas" aria-current="page"><i class="bi bi-signpost-split me-1" aria-hidden="true"></i>Tarifas y rutas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reservas.html"><i class="bi bi-calendar-check me-1" aria-hidden="true"></i>Reservas</a></li>
                     </ul>
                 </div>
             </div>
@@ -41,7 +42,7 @@
             <div class="row g-4">
           <section class="col-12 mb-0" id="tarifas" aria-labelledby="titulo-tarifas">
             <div class="h-100 rounded-3 border bg-light p-3 p-md-4">
-            <h2 id="titulo-tarifas" class="h3 mb-3">Nuestras tarifas</h2>
+            <h2 id="titulo-tarifas" class="section-title h3 mb-3">Nuestras tarifas</h2>
             <div class="table-responsive">
             <table>
                 <caption>Tarifas de alquiler de bicicletas</caption>
@@ -80,7 +81,7 @@
 
           <section class="col-12 mb-0" id="recorridos-guiados" aria-labelledby="titulo-recorridos">
             <div class="h-100 rounded-3 border bg-light p-3 p-md-4">
-            <h2 id="titulo-recorridos" class="h3 mb-3">Recorridos guiados</h2>
+            <h2 id="titulo-recorridos" class="section-title h3 mb-3">Recorridos guiados</h2>
             <div class="table-responsive">
             <table>
                 <caption>Recorridos guiados en bicicleta</caption>
@@ -118,7 +119,7 @@
                 </tbody>
             </table>
             </div>
-            <p class="mt-3"><a class="btn btn-success btn-lg" href="reservas.html">Reservar una bicicleta ahora</a></p>
+            <p class="mt-3"><a class="btn btn-primary btn-lg" href="reservas.html">Reservar una bicicleta ahora</a></p>
             </div>
           </section>
             </div>
@@ -126,7 +127,7 @@
 
           <section class="col-12 col-lg-4 mb-0" id="informacion-adicional" aria-labelledby="titulo-informacion">
             <div class="rounded-3 border bg-light p-3 p-md-4">
-            <h2 id="titulo-informacion" class="h3">Información para tu recorrido</h2>
+            <h2 id="titulo-informacion" class="section-title h3">Información para tu recorrido</h2>
             <div class="row g-3">
               <p class="col-12 col-md-6 mb-0">Todas las tarifas incluyen casco y candado.</p>
               <p class="col-12 col-md-6 mb-0">Los recorridos salen sábados y domingos a las 7:00 a. m.</p>
@@ -145,17 +146,17 @@
         </div>
     </main>
 
-    <footer class="d-flex flex-column flex-md-row justify-content-md-between gap-4 px-3 py-4 pb-5">
+    <footer class="site-footer d-flex flex-column flex-md-row justify-content-md-between gap-4 px-3 py-4 pb-5">
         <div class="footer-block flex-fill">
             <h2>Rueda Libre</h2>
             <p class="mb-0">&copy; 2026</p>
         </div>
         <div class="footer-block flex-fill">
             <h2>Contacto</h2>
-            <p class="mb-0"><a href="mailto:hola@ruedalibre.com">hola@ruedalibre.com</a></p>
+            <p class="mb-0"><a href="mailto:hola@ruedalibre.com"><i class="bi bi-envelope me-1" aria-hidden="true"></i>hola@ruedalibre.com</a></p>
         </div>
         <div class="footer-block flex-fill">
-            <h2>Horario de atención</h2>
+            <h2><i class="bi bi-clock me-1" aria-hidden="true"></i>Horario de atención</h2>
             <dl class="mb-0">
                 <dt>Lunes a viernes</dt>
                 <dd>7:00 a. m. a 7:00 p. m.</dd>
@@ -164,7 +165,7 @@
             </dl>
         </div>
     </footer>
-    <a class="whatsapp-link position-fixed bottom-0 end-0 m-3 px-3 py-2" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp (se abre en otra pestaña)">WhatsApp</a>
+    <a class="whatsapp-link btn btn-primary position-fixed bottom-0 end-0 m-3" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp (se abre en otra pestaña)"><i class="bi bi-whatsapp me-1" aria-hidden="true"></i>WhatsApp</a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

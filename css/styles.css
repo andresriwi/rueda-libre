@@ -6,29 +6,39 @@
     --color-gris-asfalto: #5B6470;
     --font-heading: "Montserrat", Arial, sans-serif;
     --font-body: "Open Sans", Arial, sans-serif;
+    --bs-primary: #1E7A4F;
+    --bs-primary-rgb: 30, 122, 79;
+    --bs-body-font-family: var(--font-body);
+    --bs-link-color: #1E7A4F;
+    --bs-link-color-rgb: 30, 122, 79;
+    --bs-link-hover-color: #14213D;
+    --bs-link-hover-color-rgb: 20, 33, 61;
+    --bs-border-radius: 0.75rem;
+    --bs-border-radius-sm: 0.5rem;
+    --bs-border-radius-lg: 1rem;
 }
 
 .bg-brand-green {
-    background-color: var(--color-verde-ruta) !important;
+    background-color: var(--color-verde-ruta);
 }
 
 .bg-brand-orange {
-    background-color: var(--color-naranja-pedal) !important;
+    background-color: var(--color-naranja-pedal);
 }
 
 .text-brand-navy {
-    color: var(--color-azul-noche) !important;
+    color: var(--color-azul-noche);
 }
 
 .text-brand-gray {
-    color: var(--color-gris-asfalto) !important;
+    color: var(--color-gris-asfalto);
 }
 
 
 body {
     background-color: var(--color-crema);
     color: var(--color-azul-noche);
-    font-family: var(--font-body);
+    font-family: var(--bs-body-font-family);
     font-size: 1rem;
     line-height: 1.6;
 }
@@ -100,6 +110,43 @@ h6 {
     color: var(--color-azul-noche);
 }
 
+.home-hero {
+    background: linear-gradient(135deg, #FFFFFF 0%, var(--color-crema) 100%);
+    border: 1px solid rgb(var(--bs-primary-rgb) / 14%);
+    border-radius: var(--bs-border-radius-lg);
+    padding: clamp(1rem, 4vw, 2rem);
+}
+
+.section-title {
+    display: table;
+    margin-inline: auto;
+    padding-bottom: 0.65rem;
+    position: relative;
+}
+
+.section-title::after {
+    background-color: var(--color-naranja-pedal);
+    border-radius: 999px;
+    bottom: 0;
+    content: "";
+    height: 0.2rem;
+    left: 25%;
+    position: absolute;
+    width: 50%;
+}
+
+.site-footer {
+    background-color: var(--color-azul-noche);
+    border-top: 0.25rem solid var(--color-verde-ruta);
+    color: #FFFFFF;
+}
+
+.benefit-icon {
+    color: var(--color-verde-ruta);
+    font-size: 1.5rem;
+    margin-right: 0.35rem;
+}
+
 p,
 li {
     max-width: 68ch;
@@ -119,20 +166,39 @@ button {
     font-weight: 600;
 }
 
-.btn-success {
+.btn-primary {
+    --bs-btn-color: #FFFFFF;
     --bs-btn-bg: var(--color-verde-ruta);
     --bs-btn-border-color: var(--color-verde-ruta);
+    --bs-btn-hover-color: #FFFFFF;
     --bs-btn-hover-bg: var(--color-azul-noche);
     --bs-btn-hover-border-color: var(--color-azul-noche);
+    --bs-btn-focus-shadow-rgb: var(--bs-primary-rgb);
+    --bs-btn-active-color: #FFFFFF;
     --bs-btn-active-bg: var(--color-azul-noche);
     --bs-btn-active-border-color: var(--color-azul-noche);
+    --bs-btn-disabled-color: #FFFFFF;
 }
 
-.btn-outline-success {
+.btn-brand-orange {
+    --bs-btn-color: var(--color-azul-noche);
+    --bs-btn-bg: var(--color-naranja-pedal);
+    --bs-btn-border-color: var(--color-naranja-pedal);
+    --bs-btn-hover-color: var(--color-azul-noche);
+    --bs-btn-hover-bg: #E58A1D;
+    --bs-btn-hover-border-color: #E58A1D;
+    --bs-btn-focus-shadow-rgb: 243, 154, 43;
+    --bs-btn-active-color: var(--color-azul-noche);
+    --bs-btn-active-bg: #D87912;
+    --bs-btn-active-border-color: #D87912;
+}
+
+.btn-outline-primary {
     --bs-btn-color: var(--color-verde-ruta);
     --bs-btn-border-color: var(--color-verde-ruta);
     --bs-btn-hover-bg: var(--color-verde-ruta);
     --bs-btn-hover-border-color: var(--color-verde-ruta);
+    --bs-btn-focus-shadow-rgb: var(--bs-primary-rgb);
     --bs-btn-active-bg: var(--color-verde-ruta);
     --bs-btn-active-border-color: var(--color-verde-ruta);
 }
@@ -158,8 +224,8 @@ textarea:focus-visible {
 }
 
 .bg-brand-green:hover {
-    background-color: var(--color-azul-noche) !important;
-    color: #FFFFFF !important;
+    background-color: var(--color-azul-noche);
+    color: #FFFFFF;
 }
 
 small {
@@ -226,21 +292,16 @@ legend {
     font-family: var(--font-heading);
 }
 
-footer {
-    background-color: var(--color-azul-noche);
-    color: #FFFFFF;
-}
-
 .footer-block h2 {
     color: #FFFFFF;
     font-size: 1rem;
 }
 
-footer a {
+.site-footer a {
     color: #FFFFFF;
 }
 
-footer a:hover {
+.site-footer a:hover {
     color: var(--color-naranja-pedal);
 }
 
