@@ -68,9 +68,10 @@ h6 {
 
 .site-brand img {
     filter: brightness(0) invert(1);
-    height: auto;
-    max-width: 6rem;
-    width: 100%;
+    height: 3.5rem;
+    max-width: 100%;
+    object-fit: contain;
+    width: auto;
 }
 
 .site-brand:focus-visible {
@@ -110,6 +111,26 @@ h6 {
     color: var(--color-azul-noche);
 }
 
+@media (max-width: 991.98px) {
+    .site-nav .navbar-nav {
+        align-items: flex-start;
+    }
+
+    .site-nav .nav-link {
+        display: inline-flex;
+        width: fit-content;
+    }
+
+    .site-nav .nav-link.active,
+    .site-nav .nav-link[aria-current="page"] {
+        background-color: var(--color-naranja-pedal);
+        border: 0;
+        border-radius: 999px;
+        color: var(--color-azul-noche);
+        font-weight: 700;
+    }
+}
+
 .home-hero {
     background: linear-gradient(135deg, #FFFFFF 0%, var(--color-crema) 100%);
     border: 1px solid rgb(var(--bs-primary-rgb) / 14%);
@@ -145,6 +166,31 @@ h6 {
     color: var(--color-verde-ruta);
     font-size: 1.5rem;
     margin-right: 0.35rem;
+}
+
+.service-card {
+    background-color: #FFFFFF;
+    border-color: rgb(var(--bs-primary-rgb) / 14%);
+    border-radius: var(--bs-border-radius-lg);
+    box-shadow: 0 0.25rem 1rem rgb(20 33 61 / 8%);
+    transition: box-shadow 160ms ease, transform 160ms ease;
+}
+
+.service-card:hover {
+    box-shadow: 0 0.5rem 1.25rem rgb(20 33 61 / 14%);
+    transform: translateY(-0.15rem);
+}
+
+.service-icon {
+    align-items: center;
+    background-color: rgb(var(--bs-primary-rgb) / 10%);
+    border-radius: 0.875rem;
+    color: var(--color-verde-ruta);
+    display: inline-flex;
+    font-size: 1.5rem;
+    height: 3rem;
+    justify-content: center;
+    width: 3rem;
 }
 
 p,
@@ -232,56 +278,72 @@ small {
     color: var(--color-gris-asfalto);
 }
 
-/* Table styles still used by tarifas.html. */
-table {
-    border-collapse: collapse;
+.pricing-table {
+    --bs-table-bg: #FFFFFF;
+    --bs-table-color: var(--color-azul-noche);
+    --bs-table-border-color: rgb(20 33 61 / 12%);
+    --bs-table-striped-bg: rgb(30 122 79 / 6%);
+    --bs-table-striped-color: var(--color-azul-noche);
+    --bs-table-hover-bg: rgb(30 122 79 / 11%);
+    --bs-table-hover-color: var(--color-azul-noche);
     table-layout: fixed;
-    width: 100%;
+    min-width: 100%;
 }
 
-caption {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    text-align: left;
-    overflow-wrap: anywhere;
+.pricing-table--routes th:first-child {
+    width: 26%;
 }
 
-th,
-td {
-    border: 1px solid var(--color-gris-asfalto);
-    font-size: 0.75rem;
-    overflow-wrap: normal;
-    padding: 0.25rem;
-    text-align: left;
+.pricing-table--routes th:nth-child(2),
+.pricing-table--routes th:nth-child(3) {
+    width: 15%;
 }
 
-#recorridos-guiados table th:first-child {
-    width: 22%;
-}
-
-#recorridos-guiados table th:nth-child(2) {
-    width: 19%;
-}
-
-#recorridos-guiados table th:nth-child(3) {
-    width: 20%;
-}
-
-#recorridos-guiados table th:nth-child(4) {
+.pricing-table--routes th:nth-child(4) {
     width: 14%;
 }
 
-#recorridos-guiados table th:nth-child(5) {
-    width: 25%;
+.pricing-table--routes th:nth-child(5) {
+    width: 30%;
 }
 
-th {
+.pricing-table caption {
+    color: var(--color-gris-asfalto);
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 1rem 1rem 0.5rem;
+}
+
+.pricing-table th,
+.pricing-table td {
+    padding: 0.8rem 1rem;
+}
+
+.pricing-table thead th {
+    background-color: var(--color-azul-noche);
+    color: #FFFFFF;
     font-weight: 600;
 }
 
-thead th {
-    background-color: var(--color-azul-noche);
-    color: #FFFFFF;
+.pricing-table tbody th {
+    color: var(--color-azul-noche);
+    font-weight: 700;
+}
+
+.pricing-table tbody td:last-child {
+    color: var(--color-verde-ruta);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+@media (max-width: 991.98px) {
+    .pricing-table--rates {
+        min-width: 34rem;
+    }
+
+    .pricing-table--routes {
+        min-width: 43rem;
+    }
 }
 
 fieldset {
@@ -327,7 +389,7 @@ legend {
 
 @media (min-width: 768px) {
     .site-brand img {
-        max-width: 8rem;
+        height: 4.5rem;
     }
 }
 

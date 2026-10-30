@@ -245,3 +245,24 @@ Medición reproducible de estilos y grilla:
 Conclusión: entre la v1.5 y la v2.0-beta, el CSS propio pasó de 624 a 259 líneas, una reducción de 58,5 %, principalmente al delegar la distribución responsive a Bootstrap. El cambio reduce el CSS de layout, aunque traslada parte de esa configuración a clases del marcado. Como no se registró el tiempo de ninguna versión con cronómetro, no se puede afirmar que la migración haya sido más rápida. La medición retrospectiva aproximada de 3 min 25 s de la prueba de catálogo no es comparable con el trabajo completo
 
 Validación final: inicio, tarifas y reservas probadas en 360, 768 y 1280 px. No hubo desbordamiento horizontal; en tarifas la información pasa a columna lateral en lg y en reservas el formulario/contacto se muestran 8/4 desde md. Se verificaron los patrones de documento y celular, rango de fecha, límite de cantidad, obligación de campos y atributos maxlength
+
+Cierre de bitácora: resumen de la semana y lanzamiento v2.0
+
+Trabajo realizado
+- Se reemplazó el menú de las tres páginas por la navbar responsive de Bootstrap. El botón hamburguesa permite abrir y cerrar los enlaces en pantallas menores a 992 px; desde lg los enlaces quedan expandidos. La página actual se identifica con `active` y `aria-current="page"`
+- Se unificaron las llamadas a la acción usando botones Bootstrap: Verde Ruta para reservar y acciones principales; variante de contorno para consultar
+- La flota y la galería de rutas se convirtieron en cards. Las tarjetas de bicicletas incluyen foto, modelo, descripción, precio y enlace de reserva; la grilla mantiene alturas iguales por fila
+- Se agregó a la portada un carrusel con las tres promociones del mes, imágenes con texto alternativo, avance automático y controles anterior/siguiente con nombres accesibles
+- El formulario de reservas recibió clases Bootstrap y mensajes correctivos junto a cada campo obligatorio, conservando las reglas de validación nativa. También se agregó una alerta cerrable para recordar el documento original y un modal con las cinco políticas de alquiler
+- Se personalizó Bootstrap con las variables de marca para Verde Ruta, tipografía, enlaces y bordes, además de una variante propia para Naranja Pedal con texto Azul Noche. Se crearon clases propias para portada, títulos de sección, beneficios y pie
+- Se integró Bootstrap Icons por CDN en navegación, contacto, beneficios y WhatsApp. Los iconos decorativos se ocultan a lectores de pantalla
+
+Verificaciones de cierre
+- Se comprobó en navegador el comportamiento del carrusel, incluidos avance automático y control siguiente; cargaron las tres imágenes y se mantuvo el mismo alto en las tarjetas de cada fila a escritorio
+- En reservas se probó que el envío activa la validación visual, que los mensajes se muestran con datos inválidos y que las restricciones nativas de documento y celular siguen vigentes. Se abrieron y cerraron el modal de políticas y la alerta.
+- Los colores de los botones se verificaron con estilos computados. El contraste medido fue 5,31:1 para texto blanco sobre Verde Ruta y 7,20:1 para texto Azul Noche sobre Naranja Pedal
+- En las tres páginas se verificó que la hoja propia va después de Bootstrap, que el bundle se incluye una sola vez, que los iconos decorativos tienen `aria-hidden="true"` y que las grillas siguen `container > row > col`.
+- La revisión final no encontró `!important` ni clases de Bootstrap de versiones anteriores. `git diff --check` terminó sin errores
+
+Lanzamiento
+La versión quedó registrada en el commit local `e47e3c6` (`feat: personaliza identidad visual v2.0`) y etiquetada como `v2.0`. El push de `main` y de la etiqueta al remoto no se pudo completar porque el entorno no tenía credenciales de GitHub. Por lo tanto, la publicación en GitHub Pages queda pendiente de autenticación y de verificar el despliegue una vez enviados los cambios

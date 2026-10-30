@@ -16,7 +16,7 @@
   <header class="site-header">
     <nav class="navbar navbar-expand-lg navbar-dark px-3 py-3" aria-label="Navegación principal">
       <div class="container-fluid">
-        <a class="site-brand navbar-brand d-inline-flex align-items-center flex-shrink-0" href="index.html">
+        <a class=" site-brand navbar-brand d-inline-flex align-items-center flex-shrink-0" href="index.html">
           <img class="d-block" src="img/logo.png" alt="Rueda Libre, alquiler de bicicletas en Medellín">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Abrir o cerrar menú de navegación">
@@ -42,7 +42,7 @@
           <p class="mb-0"><a href="#encuentranos">Visítanos en Medellín</a></p>
         </div>
         <div class="col-12 col-md-6">
-          <img class="img-fluid d-block rounded-3" src="img/portada.jpg" alt="Grupo de ciclistas junto a sus bicicletas frente a un paisaje montañoso">
+          <img class="img-fluid d-block rounded-3" src="img/portada2.jpg" alt="Grupo de ciclistas junto a sus bicicletas frente a un paisaje montañoso">
         </div>
       </div>
     </section>
@@ -53,7 +53,7 @@
         <div class="carousel-inner overflow-hidden rounded-3">
           <div class="carousel-item active">
             <div class="ratio ratio-16x9">
-              <img class="d-block w-100 object-fit-cover" src="img/bicicleta-urbana.jpg" alt="Persona en bicicleta urbana blanca con casco y mochila">
+              <img class="d-block w-100 object-fit-cover" src="img/urbana.webp" alt="Persona en bicicleta urbana.">
             </div>
             <div class="carousel-caption d-block">
               <div class="d-inline-block rounded-3 bg-dark bg-opacity-75 p-2 p-md-3">
@@ -64,7 +64,7 @@
           </div>
           <div class="carousel-item">
             <div class="ratio ratio-16x9">
-              <img class="d-block w-100 object-fit-cover" src="img/portada.jpg" alt="Grupo de ciclistas junto a sus bicicletas frente a un paisaje montañoso">
+              <img class="d-block w-100 object-fit-cover" src="img/electrica.webp" alt="Persona montando una bicicleta eléctrica">
             </div>
             <div class="carousel-caption d-block">
               <div class="d-inline-block rounded-3 bg-dark bg-opacity-75 p-2 p-md-3">
@@ -75,7 +75,7 @@
           </div>
           <div class="carousel-item">
             <div class="ratio ratio-16x9">
-              <img class="d-block w-100 object-fit-cover" src="img/ruta-ciclovia.jpg" alt="Ruta ciclista pavimentada rodeada de árboles y áreas verdes">
+              <img class="d-block w-100 object-fit-cover" src="img/ruta.webp" alt="Ruta ciclista pavimentada rodeada de árboles y áreas verdes">
             </div>
             <div class="carousel-caption d-block">
               <div class="d-inline-block rounded-3 bg-dark bg-opacity-75 p-2 p-md-3">
@@ -99,34 +99,53 @@
     <section class="mb-5" id="servicios" aria-labelledby="servicios-titulo">
       <h2 id="servicios-titulo" class="section-title mb-4 text-center">Nuestros servicios</h2>
       <div class="row g-4">
-        <article class="col-12 col-sm-6 col-lg-3">
-          <div class="h-100 rounded-3 border bg-light p-4">
-            <h3 class="h5 fw-bold">Alquiler por horas</h3>
-            <p class="mb-0">Una forma rápida y sencilla de disfrutar la ciudad sobre dos ruedas.</p>
+        <article class="col-12 col-sm-6 col-lg-3 d-flex">
+          <div class="card service-card h-100 w-100">
+            <div class="card-body d-flex flex-column p-4">
+              <i class="bi bi-clock-history service-icon mb-3" aria-hidden="true"></i>
+              <h3 class="card-title h5 fw-bold">Alquiler por horas</h3>
+              <p class="card-text">Una forma rápida y sencilla de disfrutar la ciudad sobre dos ruedas.</p>
+              <a class="btn btn-outline-primary mt-auto" href="#flota">Ver bicicletas</a>
+            </div>
           </div>
         </article>
-        <article class="col-12 col-sm-6 col-lg-3">
-          <div class="h-100 rounded-3 border bg-light p-4">
-            <h3 class="h5 fw-bold">Tours guiados en bicicleta</h3>
-            <p>Párrafo explicando las rutas guiadas...</p>
-            <a class="btn btn-outline-primary" href="paginas/tarifas.html#recorridos-guiados">Consulta los recorridos guiados y sus precios</a>
+        <article class="col-12 col-sm-6 col-lg-3 d-flex">
+          <div class="card service-card h-100 w-100">
+            <div class="card-body d-flex flex-column p-4">
+              <i class="bi bi-signpost-split service-icon mb-3" aria-hidden="true"></i>
+              <h3 class="card-title h5 fw-bold">Tours guiados en bicicleta</h3>
+              <p class="card-text">Descubre la ciudad con nuestros recorridos guiados y aprende sobre su historia y cultura.</p>
+              <a class="btn btn-outline-primary mt-auto" href="paginas/tarifas.html#recorridos-guiados">Ver recorridos</a>
+            </div>
           </div>
         </article>
-        <article class="col-12 col-sm-6 col-lg-3">
-          <div class="h-100 rounded-3 border bg-light p-4">
-            <h3 class="h5 fw-bold">Alquiler mensual</h3>
-            <p class="mb-0">Párrafo explicando la opción mensual...</p>
+        <article class="col-12 col-sm-6 col-lg-3 d-flex">
+          <div class="card service-card h-100 w-100">
+            <div class="card-body d-flex flex-column p-4">
+              <i class="bi bi-calendar-range service-icon mb-3" aria-hidden="true"></i>
+              <h3 class="card-title h5 fw-bold">Alquiler mensual</h3>
+              <p class="card-text">Puedes alquilar una bicicleta por un período de tiempo más largo.</p>
+              <a class="btn btn-outline-primary mt-auto" href="paginas/reservas.html">Consultar disponibilidad</a>
+            </div>
           </div>
         </article>
-        <article class="col-12 col-sm-6 col-lg-3">
-          <div class="h-100 rounded-3 border bg-light p-4">
-            <span class="d-inline-block rounded-pill bg-brand-orange px-3 py-1 fw-semibold text-brand-navy">Nuevo</span>
-            <h3 class="h5 mt-3 fw-bold">Alquiler de bicicletas eléctricas</h3>
-            <p class="mb-0">Recorre la ciudad con asistencia eléctrica y disfruta cada trayecto.</p>
+        <article class="col-12 col-sm-6 col-lg-3 d-flex">
+          <div class="card service-card h-100 w-100">
+            <div class="card-body d-flex flex-column p-4">
+              <div class="d-flex align-items-start justify-content-between gap-2 mb-3">
+                <i class="bi bi-lightning-charge service-icon" aria-hidden="true"></i>
+                <span class="badge rounded-pill bg-brand-orange text-brand-navy">Nuevo</span>
+              </div>
+              <h3 class="card-title h5 fw-bold">Alquiler de bicicletas eléctricas</h3>
+              <p class="card-text">Siente la comodidad de la tecnología con nuestras bicicletas eléctricas.</p>
+              <a class="btn btn-outline-primary mt-auto" href="#flota">Ver bicicletas</a>
+            </div>
           </div>
         </article>
       </div>
-      <p class="mt-4 text-center"><a class="btn btn-primary btn-lg" href="paginas/reservas.html">Reservar una bicicleta ahora</a></p>
+      <div class="mt-4 text-center">
+        <a class="btn btn-primary btn-lg" href="paginas/reservas.html">Reservar una bicicleta ahora</a>
+      </div>
     </section>
 
     <section class="mb-5" id="flota" aria-labelledby="flota-titulo">
@@ -135,7 +154,7 @@
         <article class="col-12 col-sm-6 col-lg-4 col-xl-3 d-flex">
           <div class="card h-100 w-100">
             <div class="ratio ratio-4x3">
-              <img class="card-img-top object-fit-cover" src="img/bicicleta-urbana.jpg" alt="Ciclista montando una bicicleta blanca">
+              <img class="card-img-top object-fit-cover" src="img/urbana_clasica.jpeg" alt="Bivicleta urbana clásica de color negro con canasto y guardabarros">
             </div>
             <div class="card-body d-flex flex-column">
               <h3 class="card-title h5 fw-bold">Urbana Clásica</h3>
@@ -148,7 +167,7 @@
         <article class="col-12 col-sm-6 col-lg-4 col-xl-3 d-flex">
           <div class="card h-100 w-100">
             <div class="ratio ratio-4x3">
-              <img class="card-img-top object-fit-cover" src="img/bicicleta-urbana.jpg" alt="Ciclista montando una bicicleta blanca">
+              <img class="card-img-top object-fit-cover" src="img/plegable.webp" alt="Bicicleta plegable en el metro">
             </div>
             <div class="card-body d-flex flex-column">
               <h3 class="card-title h5 fw-bold">Urbana Plegable</h3>
@@ -161,7 +180,7 @@
         <article class="col-12 col-sm-6 col-lg-4 col-xl-3 d-flex">
           <div class="card h-100 w-100">
             <div class="ratio ratio-4x3">
-              <img class="card-img-top object-fit-cover" src="img/bicicleta-urbana.jpg" alt="Ciclista montando una bicicleta blanca">
+              <img class="card-img-top object-fit-cover" src="img/montana.jpeg" alt="Bicicleta de montaña Trail de color gris con suspensión delantera y 21 cambios">
             </div>
             <div class="card-body d-flex flex-column">
               <h3 class="card-title h5 fw-bold">Montaña Trail</h3>
@@ -174,7 +193,7 @@
         <article class="col-12 col-sm-6 col-lg-4 col-xl-3 d-flex">
           <div class="card h-100 w-100">
             <div class="ratio ratio-4x3">
-              <img class="card-img-top object-fit-cover" src="img/bicicleta-urbana.jpg" alt="Ciclista montando una bicicleta blanca">
+              <img class="card-img-top object-fit-cover" src="img/aventura.jpeg" alt="Bicicleta gravel de color verde con frenos de disco y 18 cambios">
             </div>
             <div class="card-body d-flex flex-column">
               <h3 class="card-title h5 fw-bold">Gravel Aventura</h3>
@@ -187,7 +206,7 @@
         <article class="col-12 col-sm-6 col-lg-4 col-xl-3 d-flex">
           <div class="card h-100 w-100">
             <div class="ratio ratio-4x3">
-              <img class="card-img-top object-fit-cover" src="img/bicicleta-urbana.jpg" alt="Ciclista montando una bicicleta blanca">
+              <img class="card-img-top object-fit-cover" src="img/image.png" alt="Bicicleta eléctrica de color negro con asistencia eléctrica y 7 cambios">
             </div>
             <div class="card-body d-flex flex-column">
               <h3 class="card-title h5 fw-bold">Eléctrica Urbana</h3>
@@ -200,7 +219,7 @@
         <article class="col-12 col-sm-6 col-lg-4 col-xl-3 d-flex">
           <div class="card h-100 w-100">
             <div class="ratio ratio-4x3">
-              <img class="card-img-top object-fit-cover" src="img/bicicleta-urbana.jpg" alt="Ciclista montando una bicicleta blanca">
+              <img class="card-img-top object-fit-cover" src="img/infantil.webp" alt="Bicicleta infantil de color azul con asiento ajustable y ruedas pequeñas">
             </div>
             <div class="card-body d-flex flex-column">
               <h3 class="card-title h5 fw-bold">Infantil</h3>
@@ -213,7 +232,7 @@
         <article class="col-12 col-sm-6 col-lg-4 col-xl-3 d-flex">
           <div class="card h-100 w-100">
             <div class="ratio ratio-4x3">
-              <img class="card-img-top object-fit-cover" src="img/bicicleta-urbana.jpg" alt="Ciclista montando una bicicleta blanca">
+              <img class="card-img-top object-fit-cover" src="img/tadem.jpg" alt="Bicicleta tándem de color verde aguamarina con dos asientos y dos juegos de pedales">
             </div>
             <div class="card-body d-flex flex-column">
               <h3 class="card-title h5 fw-bold">Tándem</h3>
@@ -284,7 +303,7 @@
         <article class="col-12 col-md-4 d-flex">
           <div class="card h-100 w-100">
             <div class="ratio ratio-4x3">
-              <img class="card-img-top object-fit-cover" src="img/portada.jpg" alt="Grupo de ciclistas junto a sus bicicletas frente a un paisaje montañoso" width="400">
+              <img class="card-img-top object-fit-cover" src="img/portada.jpeg" alt="Grupo de ciclistas junto a sus bicicletas frente a un paisaje montañoso" width="400">
             </div>
             <div class="card-body">
               <h3 class="card-title h5 fw-bold">Reto Las Palmas</h3>
