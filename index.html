@@ -35,14 +35,40 @@
   <main class="container py-4 home-page">
     <section class="home-hero mb-5" id="quienes-somos" aria-labelledby="home-title">
       <div class="row g-4 align-items-center">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-lg-6 hero-copy">
+          <span class="eyebrow">Descubre Medellín en movimiento</span>
           <h1 id="home-title" class="display-5 fw-bold">Rueda libre</h1>
-          <p>En Rueda Libre te ofrecemos la mejor experiencia sobre dos ruedas. Conoce nuestras bicicletas y recorre Medellín a tu ritmo.</p>
-          <p><a class="btn btn-primary btn-lg" href="paginas/reservas.html">Reserva tu bicicleta</a></p>
-          <p class="mb-0"><a href="#encuentranos">Visítanos en Medellín</a></p>
+          <p class="lead">Alquiler de bicicletas pensado para recorrer la ciudad con estilo, libertad y comodidad.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary btn-lg" href="paginas/reservas.html">Reserva tu bicicleta</a>
+            <a class="btn btn-outline-primary btn-lg" href="#encuentranos">Visítanos</a>
+          </div>
+          <div class="hero-stats" aria-label="Estadísticas clave de Rueda Libre">
+            <div class="stat-item">
+              <strong>+1.200</strong>
+              <span>salidas felices</span>
+            </div>
+            <div class="stat-item">
+              <strong>4.9/5</strong>
+              <span>valoración media</span>
+            </div>
+            <div class="stat-item">
+              <strong>7 días</strong>
+              <span>de atención</span>
+            </div>
+          </div>
         </div>
-        <div class="col-12 col-md-6">
-          <img class="img-fluid d-block rounded-3" src="img/portada2.jpg" alt="Grupo de ciclistas junto a sus bicicletas frente a un paisaje montañoso">
+        <div class="col-12 col-lg-6 hero-media">
+          <div class="image-stack">
+            <img class="img-fluid d-block hero-main-image" src="img/portada2.jpg" alt="Grupo de ciclistas junto a sus bicicletas frente a un paisaje montañoso">
+            <div class="floating-card">
+              <span class="floating-badge">4.9</span>
+              <div>
+                <strong>Clientes felices</strong>
+                <small>Rutas guiadas y alquileres premium</small>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -97,7 +123,10 @@
     </section>
 
     <section class="mb-5" id="servicios" aria-labelledby="servicios-titulo">
-      <h2 id="servicios-titulo" class="section-title mb-4 text-center">Nuestros servicios</h2>
+      <div class="section-heading mb-4 text-center">
+        <span class="section-kicker">Lo que más disfrutamos</span>
+        <h2 id="servicios-titulo" class="section-title mb-0">Nuestros servicios</h2>
+      </div>
       <div class="row g-4">
         <article class="col-12 col-sm-6 col-lg-3 d-flex">
           <div class="card service-card h-100 w-100">
@@ -130,7 +159,7 @@
           </div>
         </article>
         <article class="col-12 col-sm-6 col-lg-3 d-flex">
-          <div class="card service-card h-100 w-100">
+          <div class="card service-card featured-card h-100 w-100">
             <div class="card-body d-flex flex-column p-4">
               <div class="d-flex align-items-start justify-content-between gap-2 mb-3">
                 <i class="bi bi-lightning-charge service-icon" aria-hidden="true"></i>
@@ -316,33 +345,34 @@
 
     <section class="mb-5" aria-labelledby="beneficios-titulo">
       <header class="mb-4 text-center">
+        <span class="section-kicker">La diferencia</span>
         <h2 id="beneficios-titulo" class="section-title fw-bold">¿Por qué Rueda Libre?</h2>
       </header>
       <div class="row g-4">
         <article class="col-12 col-md-6 col-xl-3">
-          <div class="h-100 rounded-3 bg-light p-4">
-            <h3 class="h5 fw-bold text-brand-navy"><i class="bi bi-tools benefit-icon" aria-hidden="true"></i>Bicicletas revisadas en cada alquiler</h3>
+          <div class="benefit-card h-100 rounded-3 p-4">
+            <h3 class="h5 fw-bold text-brand-navy"><i class="bi bi-tools benefit-icon" aria-hidden="true"></i>Bicicletas revisadas</h3>
             <p class="mb-0 text-brand-gray">Revisamos cada bicicleta antes de entregarla para que salgas a rodar con confianza.</p>
             <p class="mt-3 mb-0"><span class="d-inline-block rounded-pill bg-brand-orange px-3 py-2 fw-semibold text-brand-navy">Antes de cada salida</span></p>
           </div>
         </article>
         <article class="col-12 col-md-6 col-xl-3">
-          <div class="h-100 rounded-3 bg-light p-4">
-            <h3 class="h5 fw-bold text-brand-navy"><i class="bi bi-shield-check benefit-icon" aria-hidden="true"></i>Casco y candado incluidos</h3>
+          <div class="benefit-card h-100 rounded-3 p-4">
+            <h3 class="h5 fw-bold text-brand-navy"><i class="bi bi-shield-check benefit-icon" aria-hidden="true"></i>Casco y candado</h3>
             <p class="mb-0 text-brand-gray">Recibe el equipo esencial para pedalear y asegurar tu bicicleta durante el recorrido.</p>
             <p class="mt-3 mb-0"><span class="d-inline-block rounded-pill bg-brand-orange px-3 py-2 fw-semibold text-brand-navy">2 accesorios incluidos</span></p>
           </div>
         </article>
         <article class="col-12 col-md-6 col-xl-3">
-          <div class="h-100 rounded-3 bg-light p-4">
+          <div class="benefit-card h-100 rounded-3 p-4">
             <h3 class="h5 fw-bold text-brand-navy"><i class="bi bi-person-badge benefit-icon" aria-hidden="true"></i>Guías certificados</h3>
             <p class="mb-0 text-brand-gray">Explora Medellín acompañado por personas preparadas para guiar tus recorridos.</p>
             <p class="mt-3 mb-0"><span class="d-inline-block rounded-pill bg-brand-orange px-3 py-2 fw-semibold text-brand-navy">Acompañamiento experto</span></p>
           </div>
         </article>
         <article class="col-12 col-md-6 col-xl-3">
-          <div class="h-100 rounded-3 bg-light p-4">
-            <h3 class="h5 fw-bold text-brand-navy"><i class="bi bi-geo-alt benefit-icon" aria-hidden="true"></i>Puntos de devolución en tres sedes</h3>
+          <div class="benefit-card h-100 rounded-3 p-4">
+            <h3 class="h5 fw-bold text-brand-navy"><i class="bi bi-geo-alt benefit-icon" aria-hidden="true"></i>Sedes flexibles</h3>
             <p class="mb-0 text-brand-gray">Devuelve tu bicicleta en cualquiera de nuestros puntos habilitados.</p>
             <p class="mt-3 mb-0"><span class="d-inline-block rounded-pill bg-brand-orange px-3 py-2 fw-semibold text-brand-navy">3 sedes en Medellín</span></p>
           </div>

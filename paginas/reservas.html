@@ -33,12 +33,15 @@
         </nav>
     </header>
 
-    <main class="container py-4">
+    <main class="container py-4 reservation-page">
       <div class="row g-4">
-        <h1 class="col-12 mb-0">Reserva tu bicicleta</h1>
+        <div class="col-12 page-intro">
+          <span class="section-kicker">Tu próxima aventura</span>
+          <h1 class="mb-0">Reserva tu bicicleta</h1>
+        </div>
 
         <section class="col-12 col-md-8 mb-0" aria-labelledby="titulo-formulario">
-          <div class="rounded-3 border bg-light p-3 p-md-4">
+          <div class="feature-panel p-3 p-md-4">
             <h2 id="titulo-formulario" class="section-title">Formulario de reserva</h2>
             <div class="alert alert-info alert-dismissible fade show" role="alert">
               Recuerda traer tu documento de identidad original al recoger la bicicleta.
@@ -148,7 +151,7 @@
         </section>
 
         <aside class="col-12 col-md-4 mb-0" aria-labelledby="titulo-contacto">
-          <div class="rounded-3 border bg-light p-3 p-md-4">
+          <div class="feature-panel p-3 p-md-4">
             <h2 id="titulo-contacto" class="section-title">Contacto y atención</h2>
             <p>¿Tienes dudas sobre tu reserva? Escríbenos a <a href="mailto:hola@ruedalibre.com"><i class="bi bi-envelope me-1" aria-hidden="true"></i>hola@ruedalibre.com</a>.</p>
             <h3 id="titulo-horarios"><i class="bi bi-clock me-1" aria-hidden="true"></i>Horario de atención</h3>
@@ -207,26 +210,6 @@
     </footer>
     <a class="whatsapp-link btn btn-primary position-fixed bottom-0 end-0 m-3" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp (se abre en otra pestaña)"><i class="bi bi-whatsapp me-1" aria-hidden="true"></i>WhatsApp</a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script>
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(() => {
-  'use strict'
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
-      }
-
-      form.classList.add('was-validated')
-    }, false)
-  })
-})()
-    </script>
+  
 </body>
 </html>
