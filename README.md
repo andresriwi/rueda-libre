@@ -1,7 +1,5 @@
 # Rueda Libre
 
-Sitio web de alquiler de bicicletas y recorridos guiados en Medellín.
-
 **Sitio publicado:** [andresriwi.github.io/rueda-libre](https://andresriwi.github.io/rueda-libre/)
 
 ## Contenido
