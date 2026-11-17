@@ -33,11 +33,3 @@ rueda-libre/
 ├── bitacora.txt
 └── README.md
 ```
-
-## Ver el sitio localmente
-
-Abre `index.html` en un navegador o usa la extensión **Live Server** de Visual Studio Code para servir el proyecto localmente. La navegación entre páginas usa rutas relativas, así que conserva la estructura de carpetas.
-
-## Nota sobre las reservas
-
-El formulario de reservas es una interfaz de demostración. No envía ni almacena solicitudes en un servicio de reservas.
